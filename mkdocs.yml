@@ -1,0 +1,12 @@
+site_name: Python Synopsis
+site_description: 
+site_author: Goga Patarkatsishvili 
+copyright: Ent1c3d
+pages:
+    - Home : index.md
+    - Beginner:
+        - The Python Programming Language, Implementation and Adventages : beginner/part1.md
+    - About: About.md
+theme: cinder
+markdown_extensions:
+      - fontawesome_markdown
