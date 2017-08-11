@@ -1,31 +1,13 @@
-# Welcome to MkDocs
+Welcome to Python Synopsis!
+===================
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+### Python Study Guide 
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+In this repository I want to share resources, that helped me understand python programing language deeply. 
+It was not easy to find appropriate **books, articles, answers from Stackoverflow, online courses, videos from py conferences** and etc.   
 
-#### Commands
+So, after all I decided to share **top resources** for everyone about each topic, that you need to know about python, if you want to be senior python **Software Engineer**.   
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+Of course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than **30-40** chapters.
 
-# Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
