@@ -11,3 +11,5 @@ So, after all I decided to share **top resources** for everyone about each topic
 
 Of course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than **30-40** chapters.
 
+- Beginner
+    - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/1-Python_Programming_Lanuage)

@@ -1,12 +1,37 @@
+# Project information
 site_name: Python Synopsis
-site_description: 
+site_description: Python Study Guide
 site_author: Goga Patarkatsishvili 
-copyright: Ent1c3d
+
+# Repository
+repo_name: ent1c3d/Python-Synopsis
+repo_url: https://ent1c3d.github.io/Python-Synopsis/site/
+
+copyright: Copyright &copy; 2017 Goga Patarkatsishvili
+
+# Pages
 pages:
     - Home : index.md
     - Beginner:
-        - The Python Programming Language, Implementation and Adventages : beginner/part1.md
+        - The Python Programming Language, Implementation and Adventages : beginner/1-Python_Programming_Lanuage.md
     - About: About.md
-theme: cinder
+
+# Documentation and theme
+theme: material
 markdown_extensions:
       - fontawesome_markdown
+
+# Options
+extra:
+# logo: 'images/logo.svg'
+  palette:
+    primary: 'blue grey'
+    accent: 'light blue'
+#  font:
+#    text: 'Roboto'
+#    code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/ent1c3d'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/ent1c3d/'      

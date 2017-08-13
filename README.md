@@ -13,3 +13,6 @@ Of course, it needs plenty of time to organize best resources based on the topic
 
 So, You can start study from here:  
 <i class="fa-file"></i>  [Python Synopsis - https://ent1c3d.github.io/Python-Synopsis/site/ ](https://ent1c3d.github.io/Python-Synopsis/site/)
+
+- Beginner
+    - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/1-Python_Programming_Lanuage)
