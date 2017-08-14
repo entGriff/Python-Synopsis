@@ -14,6 +14,7 @@ pages:
     - Home : index.md
     - Beginner:
         - The Python Programming Language, Implementation and Adventages : beginner/1-Python_Programming_Lanuage.md
+        - Python Installation : beginner/2-Python_Installation.md
     - About: About.md
 
 # Documentation and theme
