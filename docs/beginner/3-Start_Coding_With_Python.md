@@ -42,10 +42,10 @@ algorithms.
 > :fa-book:  **Think Python** by Allen B. Downey  - 2012
 
 
-#Run Python Scripts
+## Run Python Scripts
 If you can't execute or run a Python script, then programming is pointless. When you run a Python script, the interpreter converts a Python program into something that that the computer can understand. Executing a Python program can be done in two ways: calling the Python interpreter with a shebang line, and using the interactive Python shell.
 
-##Run a Python Script as a File
+## Run a Python Script as a File
 Generally programmers write stand alone scripts, that are independent to live environments. Then they save it with a ".py" extension, which indicates to the operating system and programmer that the file is actually a Python program. After the interpreter is invoked, it reads and interprets the file. The way Python scripts are run on Windows versus Unix based operating systems is very different. We'll show you the difference, and how to run a Python script on Windows and Unix platforms.
 
 ### Run a Python script under Windows with the Command Prompt

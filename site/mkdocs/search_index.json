@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to Python Synopsis!\n\n\nPython Study Guide\n\n\nIn this repository I want to share resources, that helped me understand python programing language deeply. \nIt was not easy to find appropriate \nbooks, articles, answers from Stackoverflow, online courses, videos from py conferences\n and etc.   \n\n\nSo, after all I decided to share \ntop resources\n for everyone about each topic, that you need to know about python, if you want to be senior python \nSoftware Engineer\n.   \n\n\nOf course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than \n30-40\n chapters.\n\n\n\n\nBeginner\n\n\nThe Python Programming Language, Implementation and Adventages",
+            "text": "Welcome to Python Synopsis!\n\n\nPython Study Guide\n\n\nIn this repository I want to share resources, that helped me understand python programing language deeply. \nIt was not easy to find appropriate \nbooks, articles, answers from Stackoverflow, online courses, videos from py conferences\n and etc.   \n\n\nSo, after all I decided to share \ntop resources\n for everyone about each topic, that you need to know about python, if you want to be senior python \nSoftware Engineer\n.   \n\n\nOf course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than \n30-40\n chapters.\n\n\n\n\nBeginner\n\n\nThe Python Programming Language, Implementation and Adventages\n\n\nPython Installation\n\n\nStart Coding With Python",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#python-study-guide",
-            "text": "In this repository I want to share resources, that helped me understand python programing language deeply. \nIt was not easy to find appropriate  books, articles, answers from Stackoverflow, online courses, videos from py conferences  and etc.     So, after all I decided to share  top resources  for everyone about each topic, that you need to know about python, if you want to be senior python  Software Engineer .     Of course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than  30-40  chapters.   Beginner  The Python Programming Language, Implementation and Adventages",
+            "text": "In this repository I want to share resources, that helped me understand python programing language deeply. \nIt was not easy to find appropriate  books, articles, answers from Stackoverflow, online courses, videos from py conferences  and etc.     So, after all I decided to share  top resources  for everyone about each topic, that you need to know about python, if you want to be senior python  Software Engineer .     Of course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than  30-40  chapters.   Beginner  The Python Programming Language, Implementation and Adventages  Python Installation  Start Coding With Python",
             "title": "Python Study Guide"
         },
         {
@@ -79,6 +79,96 @@
             "location": "/beginner/1-Python_Programming_Lanuage/#who-uses-python-today",
             "text": "Here are links to just a few of the organizations that use python: \n-   https://wiki.python.org/moin/OrganizationsUsingPython  Python Success Stories : \n-   https://www.python.org/about/success",
             "title": "Who Uses Python Today ?"
+        },
+        {
+            "location": "/beginner/2-Python_Installation/",
+            "text": "Python Download and Installation Instructions\n\n\nInstall Python on Windows\n\n\n\n\nInstall Python on Ubuntu\n\n\n\n\nInstall Python on Mac",
+            "title": "Python Installation"
+        },
+        {
+            "location": "/beginner/2-Python_Installation/#python-download-and-installation-instructions",
+            "text": "",
+            "title": "Python Download and Installation Instructions"
+        },
+        {
+            "location": "/beginner/2-Python_Installation/#install-python-on-windows",
+            "text": "",
+            "title": "Install Python on Windows"
+        },
+        {
+            "location": "/beginner/2-Python_Installation/#install-python-on-ubuntu",
+            "text": "",
+            "title": "Install Python on Ubuntu"
+        },
+        {
+            "location": "/beginner/2-Python_Installation/#install-python-on-mac",
+            "text": "",
+            "title": "Install Python on Mac"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/",
+            "text": "What Is a Program?\n\n\nA program is a sequence of instructions that specifies how to perform a computation.\nThe computation might be something mathematical, such as solving a system of equat\nions or finding the roots of a polynomial, but it can also be a symbolic computation,\nsuch as searching and replacing text in a document or (strangely enough) compiling a\nprogram.\nThe details look different in different languages, but a few basic instructions appear in\njust about every language:\n\n\ninput: \n\n\n\n\nGet data from the keyboard, a file, or some other device.\n\n\n\n\noutput:\n\n\n\n\nDisplay data on the screen or send data to a file or other device.\n\n\n\n\nmath:\n\n\n\n\nPerform basic mathematical operations like addition and\n   multiplication.\n\n\n\n\nconditional execution:\n\n\n\n\nCheck for certain conditions and execute the appropriate code.\n\n\n\n\nrepetition:\n\n\n\n\nPerform some action repeatedly, usually with some variation.\n\n\n\n\nBelieve it or not, that\u2019s pretty much all there is to it. Every program you\u2019ve ever used, no\nmatter how complicated, is made up of instructions that look pretty much like these. So\nyou can think of programming as the process of breaking a large, complex task into\nsmaller and smaller subtasks until the subtasks are simple enough to be performed with\none of these basic instructions.\nThat may be a little vague, but we will come back to this topic when we talk about\nalgorithms.\n\n\n\n\nSource:\n \n\n\n  \nThink Python\n by Allen B. Downey  - 2012\n\n\n\n\nRun Python Scripts\n\n\nIf you can't execute or run a Python script, then programming is pointless. When you run a Python script, the interpreter converts a Python program into something that that the computer can understand. Executing a Python program can be done in two ways: calling the Python interpreter with a shebang line, and using the interactive Python shell.\n\n\nRun a Python Script as a File\n\n\nGenerally programmers write stand alone scripts, that are independent to live environments. Then they save it with a \".py\" extension, which indicates to the operating system and programmer that the file is actually a Python program. After the interpreter is invoked, it reads and interprets the file. The way Python scripts are run on Windows versus Unix based operating systems is very different. We'll show you the difference, and how to run a Python script on Windows and Unix platforms.\n\n\nRun a Python script under Windows with the Command Prompt\n\n\nWindows users must pass the path of the program as an argument to the Python interpreter. Such as follows:\n\n\nC:\\Python27\\python.exe C:\\Users\\Username\\Desktop\\my_python_script.py\n\n\n\n\nNote that you must use the full path of the Python interpreter. If you want to simply type python.exe C:\\Users\\Username\\Desktop\\my_python_script.py you must add python.exe to your PATH environmental variable.\nNote that Windows comes with two Python executables - python.exe and pythonw.exe. If you want a terminal to pop-up when you run your script, use python.exe However if you don't want any terminal pop-up, use pythonw.exe. pythonw.exe is typically used for GUI programs, where you only want to display your program, not the terminal.\n\n\nRun a Python Script Under Mac, Linux, BSD, Unix, etc\n\n\nOn platforms like Mac, BSD or Linux (Unix) you can put a \"shebang\" line as first line of the program which indicates the location of the Python interpreter on the hard drive. It's in the following format:\n\n\n#!/path/to/interpreter\n\n\n\n\nA common shebang line used for the Python interpreter is as follows:\n\n\n#!/usr/bin/env python\n\n\n\n\nYou must then make the script executable, using the following command:\n\n\nchmod +x my_python_script.py\n\n\n\n\nUnlike Windows, the Python interpreter is typically already in the $PATH environmental variable, so adding it is un-necessary.\n\n\nYou can then run a program by invoking the Python interpreter manually as follows:\n\n\npython firstprogram.py\n\n\n\n\nPython Execution with the Shell (Live Interpreter)\n\n\nAssuming that you already have Python installed and running well (if you're getting an error, see this post), open the terminal or console and type 'python' and hit the 'Enter' key. You will then be directed immediately to the Python live interpreter. Your screen will display a message something like:\n\n\nuser@hostname:~ python\nPython 3.3.0 (default, Nov 23 2012, 10:26:01) \n[GCC 4.2.1 Compatible Apple Clang 4.1 ((tags/Apple/clang-421.11.66))] on darwin\nType \nhelp\n, \ncopyright\n, \ncredits\n or \nlicense\n for more information.\n\n\n\n\n\n\nThe Python programmer should keep in mind one thing: that while working with the live interpreter, everything is read and interpreted in real-time. For example loops iterate immediately, unless they are part of function. So it requires some mental planning. Using the Python shell is typically used to execute code interactively. If you want to run a Python script from the interpreter, you must either import it or call the Python executable.\n\n\n\n\nSource:\n \n\n\n  http://pythoncentral.io/execute-python-script-file-shell/\n\n\n\n\nDebugging and Errors\n\n\nWhat Is Debugging?\n\n\nProgramming is error-prone. For whimsical reasons, programming errors are called\n\nbugs\n and the process of tracking them down is called \ndebugging\n.\nThree kinds of errors can occur in a program: syntax errors, runtime errors, and se\nmantic errors. It is useful to distinguish between them in order to track them down more\nquickly.\n\n\nError Types :\n\n\nSyntax Errors\n\n\nPython can only execute a program if the syntax is correct; otherwise, the interpreter\ndisplays an error message. Syntax refers to the structure of a program and the rules\nabout that structure.For example, parentheses have to come in matching pairs, so\n(1 + 2) is legal, but 8) is a \nsyntax error\n.\nIn English readers can tolerate most syntax errors, which is why we can read the poetry\nof e. e. cummings without spewing error messages. Python is not so forgiving. If there\nis a single syntax error anywhere in your program, Python will display an error message\nand quit, and you will not be able to run your program. During the first few weeks of\nyour programming career, you will probably spend a lot of time tracking down syntax\nerrors. As you gain experience, you will make fewer errors and find them faster.\n\n\nRuntime Errors\n\n\nThe second type of error is a runtime error, so called because the error does not appear\nuntil after the program has started running. These errors are also called exceptions\nbecause they usually indicate that something exceptional (and bad) has happened.\nRuntime errors are rare in the simple programs you will see in the first few chapters, so\nit might be a while before you encounter one.\n\n\nSemantic Errors\n\n\nThe third type of error is the semantic error. If there is a semantic error in your program,\nit will run successfully in the sense that the computer will not generate any error mess\nages, but it will not do the right thing. It will do something else. Specifically, it will do\nwhat you told it to do.\nThe problem is that the program you wrote is not the program you wanted to write. The\nmeaning of the program (its semantics) is wrong. Identifying semantic errors can be\ntricky because it requires you to work backward by looking at the output of the program\nand trying to figure out what it is doing.\n\n\n\n\nSource:\n \n\n\n  \nThink Python\n by Allen B. Downey  - 2012",
+            "title": "Start Coding With Python"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#what-is-a-program",
+            "text": "A program is a sequence of instructions that specifies how to perform a computation.\nThe computation might be something mathematical, such as solving a system of equat\nions or finding the roots of a polynomial, but it can also be a symbolic computation,\nsuch as searching and replacing text in a document or (strangely enough) compiling a\nprogram.\nThe details look different in different languages, but a few basic instructions appear in\njust about every language:  input:    Get data from the keyboard, a file, or some other device.   output:   Display data on the screen or send data to a file or other device.   math:   Perform basic mathematical operations like addition and\n   multiplication.   conditional execution:   Check for certain conditions and execute the appropriate code.   repetition:   Perform some action repeatedly, usually with some variation.   Believe it or not, that\u2019s pretty much all there is to it. Every program you\u2019ve ever used, no\nmatter how complicated, is made up of instructions that look pretty much like these. So\nyou can think of programming as the process of breaking a large, complex task into\nsmaller and smaller subtasks until the subtasks are simple enough to be performed with\none of these basic instructions.\nThat may be a little vague, but we will come back to this topic when we talk about\nalgorithms.   Source:       Think Python  by Allen B. Downey  - 2012",
+            "title": "What Is a Program?"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#run-python-scripts",
+            "text": "If you can't execute or run a Python script, then programming is pointless. When you run a Python script, the interpreter converts a Python program into something that that the computer can understand. Executing a Python program can be done in two ways: calling the Python interpreter with a shebang line, and using the interactive Python shell.",
+            "title": "Run Python Scripts"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#run-a-python-script-as-a-file",
+            "text": "Generally programmers write stand alone scripts, that are independent to live environments. Then they save it with a \".py\" extension, which indicates to the operating system and programmer that the file is actually a Python program. After the interpreter is invoked, it reads and interprets the file. The way Python scripts are run on Windows versus Unix based operating systems is very different. We'll show you the difference, and how to run a Python script on Windows and Unix platforms.",
+            "title": "Run a Python Script as a File"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#run-a-python-script-under-windows-with-the-command-prompt",
+            "text": "Windows users must pass the path of the program as an argument to the Python interpreter. Such as follows:  C:\\Python27\\python.exe C:\\Users\\Username\\Desktop\\my_python_script.py  Note that you must use the full path of the Python interpreter. If you want to simply type python.exe C:\\Users\\Username\\Desktop\\my_python_script.py you must add python.exe to your PATH environmental variable.\nNote that Windows comes with two Python executables - python.exe and pythonw.exe. If you want a terminal to pop-up when you run your script, use python.exe However if you don't want any terminal pop-up, use pythonw.exe. pythonw.exe is typically used for GUI programs, where you only want to display your program, not the terminal.",
+            "title": "Run a Python script under Windows with the Command Prompt"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#run-a-python-script-under-mac-linux-bsd-unix-etc",
+            "text": "On platforms like Mac, BSD or Linux (Unix) you can put a \"shebang\" line as first line of the program which indicates the location of the Python interpreter on the hard drive. It's in the following format:  #!/path/to/interpreter  A common shebang line used for the Python interpreter is as follows:  #!/usr/bin/env python  You must then make the script executable, using the following command:  chmod +x my_python_script.py  Unlike Windows, the Python interpreter is typically already in the $PATH environmental variable, so adding it is un-necessary.  You can then run a program by invoking the Python interpreter manually as follows:  python firstprogram.py",
+            "title": "Run a Python Script Under Mac, Linux, BSD, Unix, etc"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#python-execution-with-the-shell-live-interpreter",
+            "text": "Assuming that you already have Python installed and running well (if you're getting an error, see this post), open the terminal or console and type 'python' and hit the 'Enter' key. You will then be directed immediately to the Python live interpreter. Your screen will display a message something like:  user@hostname:~ python\nPython 3.3.0 (default, Nov 23 2012, 10:26:01) \n[GCC 4.2.1 Compatible Apple Clang 4.1 ((tags/Apple/clang-421.11.66))] on darwin\nType  help ,  copyright ,  credits  or  license  for more information.   The Python programmer should keep in mind one thing: that while working with the live interpreter, everything is read and interpreted in real-time. For example loops iterate immediately, unless they are part of function. So it requires some mental planning. Using the Python shell is typically used to execute code interactively. If you want to run a Python script from the interpreter, you must either import it or call the Python executable.   Source:      http://pythoncentral.io/execute-python-script-file-shell/",
+            "title": "Python Execution with the Shell (Live Interpreter)"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#debugging-and-errors",
+            "text": "",
+            "title": "Debugging and Errors"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#what-is-debugging",
+            "text": "Programming is error-prone. For whimsical reasons, programming errors are called bugs  and the process of tracking them down is called  debugging .\nThree kinds of errors can occur in a program: syntax errors, runtime errors, and se\nmantic errors. It is useful to distinguish between them in order to track them down more\nquickly.",
+            "title": "What Is Debugging?"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#error-types",
+            "text": "",
+            "title": "Error Types :"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#syntax-errors",
+            "text": "Python can only execute a program if the syntax is correct; otherwise, the interpreter\ndisplays an error message. Syntax refers to the structure of a program and the rules\nabout that structure.For example, parentheses have to come in matching pairs, so\n(1 + 2) is legal, but 8) is a  syntax error .\nIn English readers can tolerate most syntax errors, which is why we can read the poetry\nof e. e. cummings without spewing error messages. Python is not so forgiving. If there\nis a single syntax error anywhere in your program, Python will display an error message\nand quit, and you will not be able to run your program. During the first few weeks of\nyour programming career, you will probably spend a lot of time tracking down syntax\nerrors. As you gain experience, you will make fewer errors and find them faster.",
+            "title": "Syntax Errors"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#runtime-errors",
+            "text": "The second type of error is a runtime error, so called because the error does not appear\nuntil after the program has started running. These errors are also called exceptions\nbecause they usually indicate that something exceptional (and bad) has happened.\nRuntime errors are rare in the simple programs you will see in the first few chapters, so\nit might be a while before you encounter one.",
+            "title": "Runtime Errors"
+        },
+        {
+            "location": "/beginner/3-Start_Coding_With_Python/#semantic-errors",
+            "text": "The third type of error is the semantic error. If there is a semantic error in your program,\nit will run successfully in the sense that the computer will not generate any error mess\nages, but it will not do the right thing. It will do something else. Specifically, it will do\nwhat you told it to do.\nThe problem is that the program you wrote is not the program you wanted to write. The\nmeaning of the program (its semantics) is wrong. Identifying semantic errors can be\ntricky because it requires you to work backward by looking at the output of the program\nand trying to figure out what it is doing.   Source:       Think Python  by Allen B. Downey  - 2012",
+            "title": "Semantic Errors"
         },
         {
             "location": "/About/",

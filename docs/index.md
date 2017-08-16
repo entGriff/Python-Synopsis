@@ -13,3 +13,5 @@ Of course, it needs plenty of time to organize best resources based on the topic
 
 - Beginner
     - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/1-Python_Programming_Lanuage)
+    - [Python Installation](https://ent1c3d.github.io/Python-Synopsis/site/beginner/2-Python_Installation)
+    - [Start Coding With Python](https://ent1c3d.github.io/Python-Synopsis/site/beginner/3-Start_Coding_With_Python)

@@ -15,6 +15,7 @@ pages:
     - Beginner:
         - The Python Programming Language, Implementation and Adventages : beginner/1-Python_Programming_Lanuage.md
         - Python Installation : beginner/2-Python_Installation.md
+        - Start Coding With Python : beginner/3-Start_Coding_With_Python.md
     - About: About.md
 
 # Documentation and theme
