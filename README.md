@@ -1,5 +1,7 @@
+![python_synopsis_repo_poster](https://user-images.githubusercontent.com/2203893/29452419-61dfbeb2-8417-11e7-809b-3c66317fa3c7.jpg)
 Welcome to Python Synopsis!
 ===================
+
 
 ### Python Study Guide 
 
