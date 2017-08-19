@@ -153,7 +153,8 @@ It's important that you can read these error messages because you will be making
  5. Finally, it prints out a "SyntaxError" and tells us something about what might be the error. Usually these are very cryptic, but if you copy that text into a search engine, you will find someone else who's had that error and you can probably figure out how to fix it.
 
 
-
+> **Source:**   
+> :fa-book:  **LEARN PYTHON THE HARD WAY** by Zed A. Shaw  - 2013
 
 
 ## Debugging and Errors
