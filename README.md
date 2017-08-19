@@ -17,6 +17,6 @@ So, You can start study from here:
 <i class="fa-file"></i>  [Python Synopsis - https://ent1c3d.github.io/Python-Synopsis/site/ ](https://ent1c3d.github.io/Python-Synopsis/site/)
 
 - Beginner
-    - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/1-Python_Programming_Lanuage)
-    - [Python Installation](https://ent1c3d.github.io/Python-Synopsis/site/beginner/2-Python_Installation)
-    - [Start Coding With Python](https://ent1c3d.github.io/Python-Synopsis/site/beginner/3-Start_Coding_With_Python)
+    - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Python_Programming_Lanuage)
+    - [Python Installation](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Python_Installation)
+    - [Start Coding With Python](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Start_Coding_With_Python)

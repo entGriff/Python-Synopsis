@@ -96,6 +96,64 @@ The Python programmer should keep in mind one thing: that while working with the
 
 
 
+## A Good First Program
+
+Type the following text into a single file named **ex1.py**. Python works best with files ending in **.py**.
+
+```python	
+print "Hello World!"
+print "Hello Again"
+print "I like typing this."
+print "This is fun."
+print 'Yay! Printing.'
+print "I'd much rather you 'not'."
+print 'I "said" do not touch this.'
+```
+Your Atom text editor should look something like this on all platforms:
+
+
+![ex1.py.](../images/osx_atom.PNG)
+
+Don't worry if your editor doesn't look exactly the same, it should be close though. You may have a slightly different window header, maybe slightly different colors, and the left side of your Atom window won't say "zedshaw" but will instead show the directory you used for saving your files. All of those differences are fine.
+
+When you create this file, keep in mind these points:
+
+ 1. I did not type the line numbers on the left. Those are printed in the book so I can talk about specific lines by saying, "See line 5..." You do not type line numbers into Python scripts.
+ 2. I have the print at the beginning of the line and it looks exactly the same as what I have in ex1.py. Exactly means exactly, not kind of sort of the same. Every single character has to match for it to work. Color doesn't matter, only the characters you type.
+
+In Terminal run the file by typing:
+```shell	
+python ex1.py
+```
+
+If you did it right then you should see the same output as I in the What You Should See section of this exercise. If not, you have done something wrong. No, the computer is not wrong.
+### What You Should See
+On Mac OS X in the Terminal you should see this:
+![osx_terminal_ex1.](../images/osx_terminal_ex1.PNG)  
+On Windows in PowerShell you should see this:
+![win_powershell_ex1.](../images/win_powershell_ex1.PNG)
+
+You may see different names, before the python ex1.py command, but the important part is that you type the command and see the output is the same as mine.
+
+If you have an error it will look like this:
+
+```shell	
+$ python ex/ex1.py
+  File "ex/ex1.py", line 3
+    print "I like typing this.
+                             ^
+SyntaxError: EOL while scanning string literal
+``` 
+It's important that you can read these error messages because you will be making many of these mistakes. Even I make many of these mistakes. Let's look at this line by line.
+
+ 1. We ran our command in the Terminal to run the ex1.py script.
+ 2. Python tells us that the file ex1.py has an error on line 3.
+ 3. It prints this line of code for us to see it.
+ 4. Then it puts a ^ (caret) character to point at where the problem is. Notice the missing " (double-quote) character?
+ 5. Finally, it prints out a "SyntaxError" and tells us something about what might be the error. Usually these are very cryptic, but if you copy that text into a search engine, you will find someone else who's had that error and you can probably figure out how to fix it.
+
+
+
 
 
 ## Debugging and Errors
