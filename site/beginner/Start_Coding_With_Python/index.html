@@ -225,7 +225,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-Python_Programming_Lanuage/" title="The Python Programming Language, Implementation and Adventages" class="md-nav__link">
+    <a href="../Python_Programming_Lanuage/" title="The Python Programming Language, Implementation and Adventages" class="md-nav__link">
       The Python Programming Language, Implementation and Adventages
     </a>
   </li>
@@ -237,7 +237,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-Python_Installation/" title="Python Installation" class="md-nav__link">
+    <a href="../Python_Installation/" title="Python Installation" class="md-nav__link">
       Python Installation
     </a>
   </li>
@@ -316,6 +316,26 @@
   <a href="#python-execution-with-the-shell-live-interpreter" title="Python Execution with the Shell (Live Interpreter)" class="md-nav__link">
     Python Execution with the Shell (Live Interpreter)
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-good-first-program" title="A Good First Program" class="md-nav__link">
+    A Good First Program
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-should-see" title="What You Should See" class="md-nav__link">
+    What You Should See
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -462,6 +482,26 @@
   <a href="#python-execution-with-the-shell-live-interpreter" title="Python Execution with the Shell (Live Interpreter)" class="md-nav__link">
     Python Execution with the Shell (Live Interpreter)
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-good-first-program" title="A Good First Program" class="md-nav__link">
+    A Good First Program
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-should-see" title="What You Should See" class="md-nav__link">
+    What You Should See
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -619,6 +659,52 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <p><strong>Source:</strong> <br />
 <i class="fa fa-link"></i>  http://pythoncentral.io/execute-python-script-file-shell/</p>
 </blockquote>
+<h2 id="a-good-first-program">A Good First Program</h2>
+<p>Type the following text into a single file named <strong>ex1.py</strong>. Python works best with files ending in <strong>.py</strong>.</p>
+<pre><code class="python">print &quot;Hello World!&quot;
+print &quot;Hello Again&quot;
+print &quot;I like typing this.&quot;
+print &quot;This is fun.&quot;
+print 'Yay! Printing.'
+print &quot;I'd much rather you 'not'.&quot;
+print 'I &quot;said&quot; do not touch this.'
+</code></pre>
+
+<p>Your Atom text editor should look something like this on all platforms:</p>
+<p><img alt="ex1.py." src="../../images/osx_atom.PNG" /></p>
+<p>Don't worry if your editor doesn't look exactly the same, it should be close though. You may have a slightly different window header, maybe slightly different colors, and the left side of your Atom window won't say "zedshaw" but will instead show the directory you used for saving your files. All of those differences are fine.</p>
+<p>When you create this file, keep in mind these points:</p>
+<ol>
+<li>I did not type the line numbers on the left. Those are printed in the book so I can talk about specific lines by saying, "See line 5..." You do not type line numbers into Python scripts.</li>
+<li>I have the print at the beginning of the line and it looks exactly the same as what I have in ex1.py. Exactly means exactly, not kind of sort of the same. Every single character has to match for it to work. Color doesn't matter, only the characters you type.</li>
+</ol>
+<p>In Terminal run the file by typing:</p>
+<pre><code class="shell">python ex1.py
+</code></pre>
+
+<p>If you did it right then you should see the same output as I in the What You Should See section of this exercise. If not, you have done something wrong. No, the computer is not wrong.</p>
+<h3 id="what-you-should-see">What You Should See</h3>
+<p>On Mac OS X in the Terminal you should see this:
+<img alt="osx_terminal_ex1." src="../../images/osx_terminal_ex1.PNG" /><br />
+On Windows in PowerShell you should see this:
+<img alt="win_powershell_ex1." src="../../images/win_powershell_ex1.PNG" /></p>
+<p>You may see different names, before the python ex1.py command, but the important part is that you type the command and see the output is the same as mine.</p>
+<p>If you have an error it will look like this:</p>
+<pre><code class="shell">$ python ex/ex1.py
+  File &quot;ex/ex1.py&quot;, line 3
+    print &quot;I like typing this.
+                             ^
+SyntaxError: EOL while scanning string literal
+</code></pre>
+
+<p>It's important that you can read these error messages because you will be making many of these mistakes. Even I make many of these mistakes. Let's look at this line by line.</p>
+<ol>
+<li>We ran our command in the Terminal to run the ex1.py script.</li>
+<li>Python tells us that the file ex1.py has an error on line 3.</li>
+<li>It prints this line of code for us to see it.</li>
+<li>Then it puts a ^ (caret) character to point at where the problem is. Notice the missing " (double-quote) character?</li>
+<li>Finally, it prints out a "SyntaxError" and tells us something about what might be the error. Usually these are very cryptic, but if you copy that text into a search engine, you will find someone else who's had that error and you can probably figure out how to fix it.</li>
+</ol>
 <h2 id="debugging-and-errors">Debugging and Errors</h2>
 <h3 id="what-is-debugging">What Is Debugging?</h3>
 <p>Programming is error-prone. For whimsical reasons, programming errors are called
@@ -675,7 +761,7 @@ and trying to figure out what it is doing.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../2-Python_Installation/" title="Python Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Python_Installation/" title="Python Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
