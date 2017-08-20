@@ -135,6 +135,9 @@ On Windows in PowerShell you should see this:
 
 You may see different names, before the python ex1.py command, but the important part is that you type the command and see the output is the same as mine.
 
+<iframe src="https://trinket.io/embed/python3/826e0c1c2e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
 If you have an error it will look like this:
 
 ```shell	
@@ -198,3 +201,26 @@ and trying to figure out what it is doing.
 
 > **Source:**   
 > :fa-book:  **Think Python** by Allen B. Downey  - 2012
+
+
+##  Reserved Words
+The following list shows the Python keywords. These are reserved words and you cannot use them as constants or variables or any other identifier names. All the Python keywords contain lowercase letters only.
+
+
+[]()  | []() | []() 
+------|------|------
+**and** | **exec**| **not**
+**as**| **finally**| **or**
+**assert**| **for**	| **pass**
+**break**| **from**| **print**
+**class**| **global**| **raise**
+**continue**| **if**| **return**
+**def**| **import**| **try**
+**del**| **in**| **while**
+**elif**| **is**| **with**
+**else**| **lambda**| **yield**
+**except**| 
+
+
+> **Source:**   
+> :fa-link: https://www.tutorialspoint.com

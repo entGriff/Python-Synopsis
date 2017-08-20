@@ -25,7 +25,7 @@ markdown_extensions:
 
 # Options
 extra:
-# logo: 'images/logo.svg'
+#logo: 'images/logo.PNG'
   palette:
     primary: 'blue grey'
     accent: 'light blue'
