@@ -224,3 +224,269 @@ Looks interesting, isn't it? When the string was a simple and shorter one the va
 
 > **Source:**   
 > :fa-link: http://foobarnbaz.com/2012/07/08/understanding-python-variables/
+
+
+
+
+
+## Assignment statements in Python are more interesting than you might think
+
+
+
+In this article, we will take a deep look at three kinds of assignment statements in Python and discuss what’s going on under the hood.
+
+
+```python	
+>>> my_string = "Hello World"                # right hand side is a simple expression
+>>> another_string = my_string               # right hand side is another variable
+>>> another_string = another_string + "!"    # right hand side is an operation
+```
+
+
+What we find may surprise you.
+
+**What happens when the right hand side is a simple expression?**
+
+```python	
+>>> my_string = "Hello World"
+```
+In simple terms, this creates a string “Hello World” in memory and assigns the name my_string to it. If you are using CPython[1], then we can even check the memory address explicitly by using the built in function id .
+
+```python	
+>>> my_string = “Hello World” 
+>>> id(my_string)
+140400709562064
+```
+That big number 140400709562064 denotes where the data lives in the memory. It will be very useful for us in this entire discussion.
+What happens if we create another string with the same value?
+```python	
+>>> another_string = “Hello World”
+```
+
+Does it reuse the previous “Hello World” stored in memory or does it create an independent copy? Let’s check this by querying the id function again.
+```python	
+>>> id(another_string)
+140400709562208
+```
+This outputs a different id, so this must be an independent copy. We conclude that:
+
+> **Note:**
+Assignment statements where the right hand side is a simple expression creates independent copies every time.
+
+While for everyday programming, this is the rule we should remember, there are actually some weird exceptions to this rule. Here’s an example.
+
+```python	
+>>> my_string = “hello”
+>>> id(my_string)
+140400709562016
+>>> another_string = “hello”
+>>> id(another_string)
+140400709562016
+```
+
+
+In this case, two consecutive assignment statements did not create independent copies. Why?
+It gets interesting now.
+For optimizing memory, Python treats a special set of objects differently. The string “hello” belongs to this privileged set and has a different behavior. The exact set depends on the implementation like CPython, PyPy, Jython or IronPython. For CPython, the special rule applies to:
+
+ - Strings without whitespaces and less than 20 characters and
+ - Integers from -5 to +255.
+
+These objects are always reused or interned. The rationale behind doing this is as follows:
+
+ 1. Since programmers use these objects frequently, interning existing
+    objects saves memory.
+ 2. Since immutable objects like tuples and strings cannot be modified,
+    there is no risk in interning the same object.
+    
+However, Python does not do this for all immutable objects because there is a runtime cost involved for this feature. For interning an object, it must first search for the object in memory, and searching takes time. This is why the special treatment only applies for small integers and strings, because finding them is not that costly.
+
+**What happens when the right hand side is an existing Python variable?**
+Let’s move on to the second type of assignment statement where the right hand side is an existing Python variable.
+
+```python	
+>>> another_string = my_string
+```
+
+In this case, nothing is created in memory. After the assignment, both variables refer to the already existing object. It’s basically like giving the object an additional nickname or alias. Let’s confirm this by using the id function.
+
+```python	
+>>> my_string = “Hello World”
+>>> id(my_string)
+140400709562160
+>>> another_string = my_string
+>>> id(another_string)
+140400709562160
+```
+
+The natural question at this stage is : what if, instead of just giving the existing object an alias, we wanted to create an independent copy?
+For mutable objects, this is possible. You can either use the copy module of Python (which works on all objects) or you may use copy methods specific to the class. For a list, you have several possibilities for creating copies, all of which have different runtime.
+
+```python	
+>>> my_list = [1, 2, 3]
+>>> copy_of_my_list = my_list.copy()       # fastest, works only on latest Python versions
+>>> copy_of_my_list = my_list[:]           # same runtime as List.copy()
+>>> copy_of_my_list = list(my_list)        # slightly slower
+>>> import copy
+>>> copy_of_my_list = copy.copy(my_list)   # slowest
+```
+
+How can you copy an immutable object? Well…you can’t! At least not in a straightforward way. If you try to use the copy module or the slicing notation, you will get back the same object and not an independent copy. Here’s proof.
+
+```python	
+# Standard ways of copying lists do not apply for tuples
+
+>>> my_tuple = (1, 2, 3)
+>>> id(my_tuple)
+140371873244816
+>>> another_tuple = my_tuple[:]
+>>> id(another_tuple)
+140371873244816
+
+# The copy module also doesn’t help
+
+>>> import copy 
+>>> another_tuple = copy.copy(my_tuple)
+>>> id(another_tuple)
+140371873244816
+```
+More importantly, there is no reason for explicitly copying an immutable object anyway. We will see why in a moment when we discuss the third kind of assignment statement.
+**What happpens when the right hand side is an operation?**
+
+In this case, what happens depends on the result of the operation. We will discuss two simple cases:
+
+ 1. adding an element to an immutable object (like a tuple) and
+ 2. adding an element to a mutable object (like a list).
+
+Let’s start with the case of the tuple.
+
+```python	
+>>> another_tuple +=  (4,)
+```
+When you add a new element to a tuple using another_tuple += (4,), this creates a new object in memory. The immutability of tuples is key to understanding this. Since tuples are immutable, any operation that leads to a changed tuple would result in an independent copy.
+This is the reason why you don’t need to explicitly copy immutable objects : it happens automatically under the hood. Here’s an example.
+
+```python	
+>>> my_tuple = (1, 2, 3)
+>>> another_tuple = my_tuple     # both variables point to the same object
+>>> another_tuple += (4,)        # this statement creates a new independent object
+>>> print(another_tuple) 
+(1, 2, 3, 4)
+>>> print(my_tuple)              # the old one remains unharmed
+(1, 2, 3)
+```
+
+The situation is much different for mutable objects and much more confusing. Let’s try the same example, but now for lists.
+```python	
+>>> my_list = [1, 2, 3]
+>>> another_list = my_list     # both variables point to the same object
+>>> another_list += [4,]       # this statement modifies the object in place
+>>> print(another_list)
+[1, 2, 3, 4]
+>>> print(my_list)             # the original list is modified
+[1, 2, 3, 4]
+```
+
+Mutable objects can be modified in place. Some operations modify the list in place and some operations don’t. In this case, the statement another_list += [4,] calls another_list.__iadd__([4,]) and __iadd__ modifies the existing object in place.
+To make things doubly confusing, we would have completely different results if we used a slightly different notation.
+
+```python	
+>>> my_list = [1, 2, 3]
+>>> another_list = my_list              # both variables point to the same object
+>>> another_list = another_list + [4,]  # this creates an independent copy
+>>> print(another_list)
+[1, 2, 3, 4]
+>>> print(my_list)                      # the original list is unharmed
+[1, 2, 3]  
+```
+
+Woah! What’s going on? What changed?
+It turns out that when we change the third line, Python now internally calls a different function another_list.__add__([4,]) instead of __iadd__. This function returns a new copy instead of modifying the list in place.
+To prevent this confusion, it is always better to create a true copy of the list if you wish to prevent modification to the original.
+Let’s remember the list copy methods from before. They were List.copy(), [:], list() and copy.copy(). This is what we should use.
+
+
+```python	
+>>> my_list = [1, 2, 3]
+>>> another_list = my_list.copy()   # this creates an independent copy
+>>> another_list += [4,]            # this statement modifies the independent copy
+>>> print(another_list)
+[1, 2, 3, 4]
+>>> print(my_list)                  # the original list is unharmed
+[1, 2, 3]   
+```
+
+There’s one last gotcha that can happen when copying lists.
+Suppose we have a list that has a nested list inside it. We copy this list using List.copy() and then modify the nested list. Unfortunately, this will modify the original list again!
+
+```python	
+>>> my_list = [[1, 2, 3], 4, 5]
+>>> another_list = my_list.copy()
+>>> another_list[0] += [6,]
+>>> print(another_list)
+[[1, 2, 3, 6], 4, 5]
+>>> print(my_list)
+[[1, 2, 3, 6], 4, 5] 
+```
+
+Why did that happen? Didn’t we just copy the original list?
+The truth is : we actually don’t have a completely independent copy in this case. The copy() function generates a shallow copy. To see what it does, let’s look at the ids of all the elements in my_list and the ids of all the elements in the copied list.
+
+```python	
+# for my_list
+
+>>> my_list = [[1, 2, 3], 4, 5]
+>>> id(my_list)
+140371873277424
+>>> print([id(x) for x in my_list])
+[140371873599288, 13820176, 13820152]
+
+# for another_list obtained by my_list.copy()
+
+>>> id(another_list)
+140371873317016
+>>> print([id(x) for x in another_list])
+[140371873599288, 13820176, 13820152]
+```
+
+We see the ids of my_list and another_list are indeed different, indicating another_list is a copy. But the ids of the elements contained in another_list have the same ids as the elements in my_list . So the elements have not been copied!
+This is the property of shallow copy. It creates a new copy of the object but reuses the attributes and elements of the old copy. Thus, when you modify the elements of the new copy, you are modifying the elements of the old copy too.
+To solve this problem, we need to copy an object along with all its attributes and elements. This can be achieved by copy.deepcopy.
+
+
+```python	
+>>> my_list = [[1, 2, 3], 4, 5]
+>>> another_list = copy.deepcopy(my_list)
+>>> another_list[0] += [6,]
+>>> another_list
+[[1, 2, 3, 6], 4, 5]
+>>> my_list
+[[1, 2, 3], 4, 5]
+```
+
+Deep copy is a quite time intensive operation and can take 1o times longer to complete compared to a shallow copy. But in some situations, it is unavoidable.
+
+### Conclusion
+This brings me to the end of this discussion. To summarize, we have talked about the different scenarios which can arise in an assignment statement in Python. We found that:
+
+ - When the right hand side is a simple expression, a new copy is
+   created every time. There are some exceptions to this rule, which
+   depend on the implementation
+ - When the right hand side is an existing Python variable, then an
+   alias is created for the existing copy.
+ - When the right hand side is an operation, then the outcome depends on
+   the operation. In a simple case involving a tuple, we saw that an
+   independent copy was created. In the same case with lists, we saw
+   that the list was modified in place in one case (when we used
+   __iadd__) and a new copy was generated in another case (when we used __add__).
+ - List item
+ - Mutable objects can be copied but immutable objects cannot be copied
+   in a straightforward way. There is also no need to copy immutable
+   objects.
+ - To copy a mutable object along with all its attributes and elements,
+   we need to use deep copy.
+
+
+> **Source:**   
+> :fa-link: https://medium.com/broken-window/many-names-one-memory-address-122f78734cb6
+
