@@ -409,6 +409,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Datatype_And_Variables/" title="Datatype And Variables" class="md-nav__link">
+      Datatype And Variables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -636,37 +648,43 @@ algorithms.</p>
 <p>Generally programmers write stand alone scripts, that are independent to live environments. Then they save it with a ".py" extension, which indicates to the operating system and programmer that the file is actually a Python program. After the interpreter is invoked, it reads and interprets the file. The way Python scripts are run on Windows versus Unix based operating systems is very different. We'll show you the difference, and how to run a Python script on Windows and Unix platforms.</p>
 <h3 id="run-a-python-script-under-windows-with-the-command-prompt">Run a Python script under Windows with the Command Prompt</h3>
 <p>Windows users must pass the path of the program as an argument to the Python interpreter. Such as follows:</p>
-<pre><code class="shell">C:\Python27\python.exe C:\Users\Username\Desktop\my_python_script.py
-</code></pre>
+<div class="codehilite"><pre><span></span>C:<span class="se">\P</span>ython27<span class="se">\p</span>ython.exe C:<span class="se">\U</span>sers<span class="se">\U</span>sername<span class="se">\D</span>esktop<span class="se">\m</span>y_python_script.py
+</pre></div>
+
 
 <p>Note that you must use the full path of the Python interpreter. If you want to simply type python.exe C:\Users\Username\Desktop\my_python_script.py you must add python.exe to your PATH environmental variable.
 Note that Windows comes with two Python executables - python.exe and pythonw.exe. If you want a terminal to pop-up when you run your script, use python.exe However if you don't want any terminal pop-up, use pythonw.exe. pythonw.exe is typically used for GUI programs, where you only want to display your program, not the terminal.</p>
 <h3 id="run-a-python-script-under-mac-linux-bsd-unix-etc">Run a Python Script Under Mac, Linux, BSD, Unix, etc</h3>
 <p>On platforms like Mac, BSD or Linux (Unix) you can put a "shebang" line as first line of the program which indicates the location of the Python interpreter on the hard drive. It's in the following format:</p>
-<pre><code class="shell">#!/path/to/interpreter
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="ch">#!/path/to/interpreter</span>
+</pre></div>
+
 
 <p>A common shebang line used for the Python interpreter is as follows:</p>
-<pre><code class="shell">#!/usr/bin/env python
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+</pre></div>
+
 
 <p>You must then make the script executable, using the following command:</p>
-<pre><code class="shell">chmod +x my_python_script.py
-</code></pre>
+<div class="codehilite"><pre><span></span>chmod +x my_python_script.py
+</pre></div>
+
 
 <p>Unlike Windows, the Python interpreter is typically already in the $PATH environmental variable, so adding it is un-necessary.</p>
 <p>You can then run a program by invoking the Python interpreter manually as follows:</p>
-<pre><code class="shell">python firstprogram.py
-</code></pre>
+<div class="codehilite"><pre><span></span>python firstprogram.py
+</pre></div>
+
 
 <h2 id="python-execution-with-the-shell-live-interpreter">Python Execution with the Shell (Live Interpreter)</h2>
 <p>Assuming that you already have Python installed and running well (if you're getting an error, see this post), open the terminal or console and type 'python' and hit the 'Enter' key. You will then be directed immediately to the Python live interpreter. Your screen will display a message something like:</p>
-<pre><code class="shell">user@hostname:~ python
-Python 3.3.0 (default, Nov 23 2012, 10:26:01) 
-[GCC 4.2.1 Compatible Apple Clang 4.1 ((tags/Apple/clang-421.11.66))] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+<div class="codehilite"><pre><span></span>user@hostname:~ python
+Python <span class="m">3</span>.3.0 <span class="o">(</span>default, Nov <span class="m">23</span> <span class="m">2012</span>, <span class="m">10</span>:26:01<span class="o">)</span> 
+<span class="o">[</span>GCC <span class="m">4</span>.2.1 Compatible Apple Clang <span class="m">4</span>.1 <span class="o">((</span>tags/Apple/clang-421.11.66<span class="o">))]</span> on darwin
+Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
 &gt;&gt;&gt;
-</code></pre>
+</pre></div>
+
 
 <p>The Python programmer should keep in mind one thing: that while working with the live interpreter, everything is read and interpreted in real-time. For example loops iterate immediately, unless they are part of function. So it requires some mental planning. Using the Python shell is typically used to execute code interactively. If you want to run a Python script from the interpreter, you must either import it or call the Python executable.</p>
 <blockquote>
@@ -675,14 +693,15 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </blockquote>
 <h2 id="a-good-first-program">A Good First Program</h2>
 <p>Type the following text into a single file named <strong>ex1.py</strong>. Python works best with files ending in <strong>.py</strong>.</p>
-<pre><code class="python">print &quot;Hello World!&quot;
-print &quot;Hello Again&quot;
-print &quot;I like typing this.&quot;
-print &quot;This is fun.&quot;
-print 'Yay! Printing.'
-print &quot;I'd much rather you 'not'.&quot;
-print 'I &quot;said&quot; do not touch this.'
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Hello Again&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;I like typing this.&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;This is fun.&quot;</span>
+<span class="k">print</span> <span class="s1">&#39;Yay! Printing.&#39;</span>
+<span class="k">print</span> <span class="s2">&quot;I&#39;d much rather you &#39;not&#39;.&quot;</span>
+<span class="k">print</span> <span class="s1">&#39;I &quot;said&quot; do not touch this.&#39;</span>
+</pre></div>
+
 
 <p>Your Atom text editor should look something like this on all platforms:</p>
 <p><img alt="ex1.py." src="../../images/osx_atom.PNG" /></p>
@@ -693,8 +712,9 @@ print 'I &quot;said&quot; do not touch this.'
 <li>I have the print at the beginning of the line and it looks exactly the same as what I have in ex1.py. Exactly means exactly, not kind of sort of the same. Every single character has to match for it to work. Color doesn't matter, only the characters you type.</li>
 </ol>
 <p>In Terminal run the file by typing:</p>
-<pre><code class="shell">python ex1.py
-</code></pre>
+<div class="codehilite"><pre><span></span>python ex1.py
+</pre></div>
+
 
 <p>If you did it right then you should see the same output as I in the What You Should See section of this exercise. If not, you have done something wrong. No, the computer is not wrong.</p>
 <h3 id="what-you-should-see">What You Should See</h3>
@@ -706,12 +726,13 @@ On Windows in PowerShell you should see this:
 <iframe src="https://trinket.io/embed/python3/826e0c1c2e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 <p>If you have an error it will look like this:</p>
-<pre><code class="shell">$ python ex/ex1.py
-  File &quot;ex/ex1.py&quot;, line 3
-    print &quot;I like typing this.
-                             ^
-SyntaxError: EOL while scanning string literal
-</code></pre>
+<div class="codehilite"><pre><span></span>$ python ex/ex1.py
+  File <span class="s2">&quot;ex/ex1.py&quot;</span>, line <span class="m">3</span>
+    print <span class="s2">&quot;I like typing this.</span>
+<span class="s2">                             ^</span>
+<span class="s2">SyntaxError: EOL while scanning string literal</span>
+</pre></div>
+
 
 <p>It's important that you can read these error messages because you will be making many of these mistakes. Even I make many of these mistakes. Let's look at this line by line.</p>
 <ol>
@@ -868,13 +889,13 @@ and trying to figure out what it is doing.</p>
           </a>
         
         
-          <a href="../../About/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Datatype_And_Variables/" title="Datatype And Variables" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                About
+                Datatype And Variables
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

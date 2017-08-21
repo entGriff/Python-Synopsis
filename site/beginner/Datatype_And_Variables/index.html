@@ -1,0 +1,1061 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Python Study Guide">
+      
+      
+      
+        <meta name="author" content="Goga Patarkatsishvili">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Datatype And Variables - Python Synopsis</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Python Synopsis" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Beginner
+                </span>
+              
+            
+            Datatype And Variables
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Synopsis
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_Programming_Lanuage/" title="The Python Programming Language, Implementation and Adventages" class="md-nav__link">
+      The Python Programming Language, Implementation and Adventages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_Installation/" title="Python Installation" class="md-nav__link">
+      Python Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Start_Coding_With_Python/" title="Start Coding With Python" class="md-nav__link">
+      Start Coding With Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Datatype And Variables
+      </label>
+    
+    <a href="./" title="Datatype And Variables" class="md-nav__link md-nav__link--active">
+      Datatype And Variables
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assigning-values-to-variables" title="Assigning Values to Variables" class="md-nav__link">
+    Assigning Values to Variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simultaneous-assignments" title="Simultaneous Assignments" class="md-nav__link">
+    Simultaneous Assignments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-data-types" title="Python Data Types" class="md-nav__link">
+    Python Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiving-input-from-console" title="Receiving input from Console" class="md-nav__link">
+    Receiving input from Console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-python-variables-and-memory-management" title="Understanding Python variables and Memory Management" class="md-nav__link">
+    Understanding Python variables and Memory Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-bit-about-pythons-memory-management" title="A bit about Python's memory management" class="md-nav__link">
+    A bit about Python's memory management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-statements-in-python-are-more-interesting-than-you-might-think" title="Assignment statements in Python are more interesting than you might think" class="md-nav__link">
+    Assignment statements in Python are more interesting than you might think
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assigning-values-to-variables" title="Assigning Values to Variables" class="md-nav__link">
+    Assigning Values to Variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simultaneous-assignments" title="Simultaneous Assignments" class="md-nav__link">
+    Simultaneous Assignments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-data-types" title="Python Data Types" class="md-nav__link">
+    Python Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiving-input-from-console" title="Receiving input from Console" class="md-nav__link">
+    Receiving input from Console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-python-variables-and-memory-management" title="Understanding Python variables and Memory Management" class="md-nav__link">
+    Understanding Python variables and Memory Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-bit-about-pythons-memory-management" title="A bit about Python's memory management" class="md-nav__link">
+    A bit about Python's memory management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-statements-in-python-are-more-interesting-than-you-might-think" title="Assignment statements in Python are more interesting than you might think" class="md-nav__link">
+    Assignment statements in Python are more interesting than you might think
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="datatype-variables">Datatype &amp; Variables</h1>
+<p>Variables are named locations which are used to store references to the object stored in memory. The names we choose for variables and functions are commonly known as Identifiers. In python Identifiers must obey the following rules.</p>
+<ol>
+<li>All identifiers must start with letter or underscore ( _ ) , you
+    can’t use digits. For e.g my_var  is valid identifier while 1digit 
+    is not.</li>
+<li>Identifiers can contain letters, digits and underscores ( _  ). </li>
+<li>They  can be of any length.</li>
+<li>
+<p>Identifier can’t be a keyword (keywords are reserved words that
+    Python uses for special purpose).Following are Keywords in python 3.</p>
+<table>
+<thead>
+<tr>
+<th><a href=""></a></th>
+<th><a href=""></a></th>
+<th><a href=""></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>and</strong></td>
+<td><strong>exec</strong></td>
+<td><strong>not</strong></td>
+</tr>
+<tr>
+<td><strong>as</strong></td>
+<td><strong>finally</strong></td>
+<td><strong>or</strong></td>
+</tr>
+<tr>
+<td><strong>assert</strong></td>
+<td><strong>for</strong></td>
+<td><strong>pass</strong></td>
+</tr>
+<tr>
+<td><strong>break</strong></td>
+<td><strong>from</strong></td>
+<td><strong>print</strong></td>
+</tr>
+<tr>
+<td><strong>class</strong></td>
+<td><strong>global</strong></td>
+<td><strong>raise</strong></td>
+</tr>
+<tr>
+<td><strong>continue</strong></td>
+<td><strong>if</strong></td>
+<td><strong>return</strong></td>
+</tr>
+<tr>
+<td><strong>def</strong></td>
+<td><strong>import</strong></td>
+<td><strong>try</strong></td>
+</tr>
+<tr>
+<td><strong>del</strong></td>
+<td><strong>in</strong></td>
+<td><strong>while</strong></td>
+</tr>
+<tr>
+<td><strong>elif</strong></td>
+<td><strong>is</strong></td>
+<td><strong>with</strong></td>
+</tr>
+<tr>
+<td><strong>else</strong></td>
+<td><strong>lambda</strong></td>
+<td><strong>yield</strong></td>
+</tr>
+<tr>
+<td><strong>except</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="assigning-values-to-variables">Assigning Values to Variables</h2>
+<p>Values are basic things that programs works with. For e.g 1 , 11 , 3.14 , "hello"  are all values. In programming terminology they are also commonly known as literals. Literals can be of different type for e.g 1 , 11  are of type int , 3.14  is float and "hello"  is string . Remember in python everything is object even basic data types like int, float, string, we will elaborate more on this in later chapters.</p>
+<p>In python you don’t need to declare types of variable ahead of time. Interpreter automatically detects the type of the variable by the data it contains. To assign value to a variable equal sign ( = ) is used. =  is also known as assignment operator.</p>
+<p>Following are some examples of variable declaration:</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>                       <span class="c1"># x is integer</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>                     <span class="c1"># pi is float</span>
+<span class="n">empname</span> <span class="o">=</span> <span class="s2">&quot;python is great&quot;</span>   <span class="c1"># empname is string</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># this statement assign 100 to c, b and a.</span>
+</pre></div>
+
+
+<blockquote>
+<p><strong>Note:</strong>
+In the above code x  stores reference to the 100  ( which is an int object ) , x  don’t store 100 itself.</p>
+</blockquote>
+<p>In Python comments are preceded by a pound sign ( # ). Comments are not programming statements that python interpreter executes while running the program. Comments are used by programmers to remind themselves how the program works. They are also used to write program documentation.</p>
+<div class="codehilite"><pre><span></span><span class="c1">#display hello world</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="simultaneous-assignments">Simultaneous Assignments</h3>
+<p>Python allow simultaneous assignment syntax like this:</p>
+<div class="codehilite"><pre><span></span><span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">varn</span> <span class="o">=</span> <span class="n">exp1</span><span class="p">,</span> <span class="n">exp2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">expn</span>
+</pre></div>
+
+
+<p>this statements tells the python to evaluate all the expression on the right and assign them to the corresponding variables on the left. Simultaneous Assignments is helpful to swap values of two variables. For e.g</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="c1"># assign y value to x and x value to y</span>
+</pre></div>
+
+
+<h2 id="python-data-types">Python Data Types</h2>
+<p>Python has 5 standard data types namely.
+a) <a href="http://thepythonguru.com/python-numbers/">Numbers</a>
+b) <a href="http://thepythonguru.com/python-strings/">String</a>
+c)  <a href="http://thepythonguru.com/python-lists/">List</a>
+d) <a href="http://thepythonguru.com/python-tuples/">Tuple</a>
+e) <a href="http://thepythonguru.com/python-dictionaries/">Dictionary</a>
+f)  Boolean – In Python True and False  are boolean literals.  But the following values are also considered as false.</p>
+<p><strong>[] – empty list , () – empty tuple , {} – empty dictionary</strong> </p>
+<h2 id="receiving-input-from-console">Receiving input from Console</h2>
+<p>input()  function is used to receive input from the console.</p>
+<p>Syntax:  input([prompt]) -&gt; string</p>
+<p>input()  function accepts an optional string argument called prompt  and returns a string.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name: &quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Enter</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">tim</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span>
+<span class="s1">&#39;tim&#39;</span>
+</pre></div>
+
+
+<p>Note that input()  returns string even if you enter a number, to convert it to an integer you can use int() or eval() .</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age: &quot;</span><span class="p">))</span>
+<span class="n">Enter</span> <span class="n">your</span> <span class="n">age</span><span class="p">:</span> <span class="mi">22</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">age</span>
+<span class="mi">22</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> http://thepythonguru.com</p>
+</blockquote>
+<h2 id="understanding-python-variables-and-memory-management">Understanding Python variables and Memory Management</h2>
+<p>Have you ever noticed any difference between variables in Python and C? For example, when you do an assignment like the following in C, it actually creates a block of memory space so that it can hold the value for that variable</p>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+
+
+<p>You can think of it as putting the value assigned in a box with the variable name as shown below.
+<img alt="a1box." src="../../images/a1box.PNG" /></p>
+<p>And for all the variables you create a new box is created with the variable name to hold the value. If you change the value of the variable the box will be updated with the new value. That means doing</p>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+
+
+<p>will result in</p>
+<p><img alt="a2box." src="../../images/a2box.PNG" /></p>
+<p>Assigning one variable to another makes a copy of the value and put that value in the new box.</p>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+</pre></div>
+
+
+<p><img alt="b2box." src="../../images/b2box.PNG" /> <img alt="a2box." src="../../images/a2box.PNG" /></p>
+<p>But in Python variables work more like tags unlike the boxes you have seen before. When you do an assignment in Python, it tags the value with the variable name.</p>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+<p><img alt="a1tag." src="../../images/a1tag.PNG" /></p>
+<p>and if you change the value of the varaible, it just changes the tag to the new value in memory. You dont need to do the housekeeping job of freeing the memory here. Python's Automatic Garbage Collection does it for you. When a value is without names/tags it is automatically removed from memory.</p>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+
+
+<p><img alt="a2tag." src="../../images/a2tag.PNG" /></p>
+<p>Assigning one variable to another makes a new tag bound to the same value as show below.</p>
+<div class="codehilite"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</pre></div>
+
+
+<p><img alt="ab2tag." src="../../images/ab2tag.PNG" />
+Other languages have 'variables'. Python has 'names'.</p>
+<h2 id="a-bit-about-pythons-memory-management">A bit about Python's memory management</h2>
+<p>As you have seen before, a value will have only one copy in memory and all the variables having this value will refer to this memory location. For example when you have variables a, b, c having a value 10, it doesn't mean that there will be 3 copy of 10s in memory. There will be only one 10 and all the variables a, b, c will point to this value. Once a variable is updated, say you are doing a += 1 a new value 11 will be allocated in memory and a will be pointing to this.</p>
+<p>Let's check this behaviour with Python Interpreter. Start the Python Shell and try the following for yourselves.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">140621897573616</span><span class="p">,</span> <span class="mi">140621897573616</span><span class="p">,</span> <span class="mi">140621897573616</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140621897573592</span>
+</pre></div>
+
+
+<p>id() will return an objects memory address (object's identity). As you have noticed, when you assign the same integer value to the variables, we see the same ids. But this assumption does not hold true all the time. See the following for example</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="mi">4338740848</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="mi">4338741040</span>
+</pre></div>
+
+
+<p>What happened here? Even after assigning the same integer values to different variable names, we are getting two different ids here. These are actually the effects of CPython optimization we are observing here. CPython implementation keeps an array of integer objects for all integers between -5 and 256. So when we create an integer in that range, they simply back reference to the existing object. You may refer the following <a href="http://stackoverflow.com/questions/306313/is-operator-behaves-unexpectedly-with-integers">links</a> for more information.</p>
+<p>Let's take a look at strings now.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">s1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4454725888</span><span class="p">,</span> <span class="mi">4454725888</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="ow">is</span> <span class="n">s2</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s3</span> <span class="o">=</span> <span class="s1">&#39;hello, world!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s4</span> <span class="o">=</span> <span class="s1">&#39;hello, world!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">s3</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">s4</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4454721608</span><span class="p">,</span> <span class="mi">4454721664</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s3</span> <span class="o">==</span> <span class="n">s4</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s3</span> <span class="ow">is</span> <span class="n">s4</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<p>Looks interesting, isn't it? When the string was a simple and shorter one the variable names where referring to the same object in memory. But when they became bigger, this was not the case. This is called interning, and Python does interning (to some extent) of shorter string literals (as in s1 and s2) which are created at compile time. But in general, Python string literals creates a new string object each time (as in s3 and s4). Interning is runtime dependant and is always a trade-off between memory use and the cost of checking if you are creating the same string. There's a built-in intern() function to forcefully apply interning. Read more about interning from the following links.</p>
+<p><a href="http://stackoverflow.com/questions/17679861/does-python-intern-strings">Stack Overflow: Does Python intern Strings?</a>
+<a href="http://stackoverflow.com/questions/15541404/python-string-interning">Stack Overflow: Python String Interning</a>
+<a href="http://guilload.com/python-string-interning/">Internals of Python String Interning</a></p>
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> http://foobarnbaz.com/2012/07/08/understanding-python-variables/</p>
+</blockquote>
+<h2 id="assignment-statements-in-python-are-more-interesting-than-you-might-think">Assignment statements in Python are more interesting than you might think</h2>
+<p>In this article, we will take a deep look at three kinds of assignment statements in Python and discuss what’s going on under the hood.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span>                <span class="c1"># right hand side is a simple expression</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_string</span> <span class="o">=</span> <span class="n">my_string</span>               <span class="c1"># right hand side is another variable</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_string</span> <span class="o">=</span> <span class="n">another_string</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>    <span class="c1"># right hand side is an operation</span>
+</pre></div>
+
+
+<p>What we find may surprise you.</p>
+<p><strong>What happens when the right hand side is a simple expression?</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span>
+</pre></div>
+
+
+<p>In simple terms, this creates a string “Hello World” in memory and assigns the name my_string to it. If you are using CPython[1], then we can even check the memory address explicitly by using the built in function id .</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_string</span> <span class="o">=</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">World</span><span class="err">”</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+<span class="mi">140400709562064</span>
+</pre></div>
+
+
+<p>That big number 140400709562064 denotes where the data lives in the memory. It will be very useful for us in this entire discussion.
+What happens if we create another string with the same value?</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">another_string</span> <span class="o">=</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">World</span><span class="err">”</span>
+</pre></div>
+
+
+<p>Does it reuse the previous “Hello World” stored in memory or does it create an independent copy? Let’s check this by querying the id function again.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+<span class="mi">140400709562208</span>
+</pre></div>
+
+
+<p>This outputs a different id, so this must be an independent copy. We conclude that:</p>
+<blockquote>
+<p><strong>Note:</strong>
+Assignment statements where the right hand side is a simple expression creates independent copies every time.</p>
+</blockquote>
+<p>While for everyday programming, this is the rule we should remember, there are actually some weird exceptions to this rule. Here’s an example.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_string</span> <span class="o">=</span> <span class="err">“</span><span class="n">hello</span><span class="err">”</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+<span class="mi">140400709562016</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_string</span> <span class="o">=</span> <span class="err">“</span><span class="n">hello</span><span class="err">”</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+<span class="mi">140400709562016</span>
+</pre></div>
+
+
+<p>In this case, two consecutive assignment statements did not create independent copies. Why?
+It gets interesting now.
+For optimizing memory, Python treats a special set of objects differently. The string “hello” belongs to this privileged set and has a different behavior. The exact set depends on the implementation like CPython, PyPy, Jython or IronPython. For CPython, the special rule applies to:</p>
+<ul>
+<li>Strings without whitespaces and less than 20 characters and</li>
+<li>Integers from -5 to +255.</li>
+</ul>
+<p>These objects are always reused or interned. The rationale behind doing this is as follows:</p>
+<ol>
+<li>Since programmers use these objects frequently, interning existing
+    objects saves memory.</li>
+<li>Since immutable objects like tuples and strings cannot be modified,
+    there is no risk in interning the same object.</li>
+</ol>
+<p>However, Python does not do this for all immutable objects because there is a runtime cost involved for this feature. For interning an object, it must first search for the object in memory, and searching takes time. This is why the special treatment only applies for small integers and strings, because finding them is not that costly.</p>
+<p><strong>What happens when the right hand side is an existing Python variable?</strong>
+Let’s move on to the second type of assignment statement where the right hand side is an existing Python variable.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">another_string</span> <span class="o">=</span> <span class="n">my_string</span>
+</pre></div>
+
+
+<p>In this case, nothing is created in memory. After the assignment, both variables refer to the already existing object. It’s basically like giving the object an additional nickname or alias. Let’s confirm this by using the id function.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_string</span> <span class="o">=</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">World</span><span class="err">”</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+<span class="mi">140400709562160</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_string</span> <span class="o">=</span> <span class="n">my_string</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">another_string</span><span class="p">)</span>
+<span class="mi">140400709562160</span>
+</pre></div>
+
+
+<p>The natural question at this stage is : what if, instead of just giving the existing object an alias, we wanted to create an independent copy?
+For mutable objects, this is possible. You can either use the copy module of Python (which works on all objects) or you may use copy methods specific to the class. For a list, you have several possibilities for creating copies, all of which have different runtime.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">copy_of_my_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>       <span class="c1"># fastest, works only on latest Python versions</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">copy_of_my_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[:]</span>           <span class="c1"># same runtime as List.copy()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">copy_of_my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>        <span class="c1"># slightly slower</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">copy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">copy_of_my_list</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>   <span class="c1"># slowest</span>
+</pre></div>
+
+
+<p>How can you copy an immutable object? Well…you can’t! At least not in a straightforward way. If you try to use the copy module or the slicing notation, you will get back the same object and not an independent copy. Here’s proof.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Standard ways of copying lists do not apply for tuples</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>
+<span class="mi">140371873244816</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_tuple</span> <span class="o">=</span> <span class="n">my_tuple</span><span class="p">[:]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">another_tuple</span><span class="p">)</span>
+<span class="mi">140371873244816</span>
+
+<span class="c1"># The copy module also doesn’t help</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">copy</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_tuple</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">another_tuple</span><span class="p">)</span>
+<span class="mi">140371873244816</span>
+</pre></div>
+
+
+<p>More importantly, there is no reason for explicitly copying an immutable object anyway. We will see why in a moment when we discuss the third kind of assignment statement.
+<strong>What happpens when the right hand side is an operation?</strong></p>
+<p>In this case, what happens depends on the result of the operation. We will discuss two simple cases:</p>
+<ol>
+<li>adding an element to an immutable object (like a tuple) and</li>
+<li>adding an element to a mutable object (like a list).</li>
+</ol>
+<p>Let’s start with the case of the tuple.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">another_tuple</span> <span class="o">+=</span>  <span class="p">(</span><span class="mi">4</span><span class="p">,)</span>
+</pre></div>
+
+
+<p>When you add a new element to a tuple using another_tuple += (4,), this creates a new object in memory. The immutability of tuples is key to understanding this. Since tuples are immutable, any operation that leads to a changed tuple would result in an independent copy.
+This is the reason why you don’t need to explicitly copy immutable objects : it happens automatically under the hood. Here’s an example.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_tuple</span> <span class="o">=</span> <span class="n">my_tuple</span>     <span class="c1"># both variables point to the same object</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_tuple</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,)</span>        <span class="c1"># this statement creates a new independent object</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">another_tuple</span><span class="p">)</span> 
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>              <span class="c1"># the old one remains unharmed</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The situation is much different for mutable objects and much more confusing. Let’s try the same example, but now for lists.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">=</span> <span class="n">my_list</span>     <span class="c1"># both variables point to the same object</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,]</span>       <span class="c1"># this statement modifies the object in place</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">another_list</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>             <span class="c1"># the original list is modified</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Mutable objects can be modified in place. Some operations modify the list in place and some operations don’t. In this case, the statement another_list += [4,] calls another_list.<strong>iadd</strong>([4,]) and <strong>iadd</strong> modifies the existing object in place.
+To make things doubly confusing, we would have completely different results if we used a slightly different notation.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">=</span> <span class="n">my_list</span>              <span class="c1"># both variables point to the same object</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">=</span> <span class="n">another_list</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,]</span>  <span class="c1"># this creates an independent copy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">another_list</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>                      <span class="c1"># the original list is unharmed</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  
+</pre></div>
+
+
+<p>Woah! What’s going on? What changed?
+It turns out that when we change the third line, Python now internally calls a different function another_list.<strong>add</strong>([4,]) instead of <strong>iadd</strong>. This function returns a new copy instead of modifying the list in place.
+To prevent this confusion, it is always better to create a true copy of the list if you wish to prevent modification to the original.
+Let’s remember the list copy methods from before. They were List.copy(), [:], list() and copy.copy(). This is what we should use.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>   <span class="c1"># this creates an independent copy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,]</span>            <span class="c1"># this statement modifies the independent copy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">another_list</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>                  <span class="c1"># the original list is unharmed</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>   
+</pre></div>
+
+
+<p>There’s one last gotcha that can happen when copying lists.
+Suppose we have a list that has a nested list inside it. We copy this list using List.copy() and then modify the nested list. Unfortunately, this will modify the original list again!</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">another_list</span><span class="p">)</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> 
+</pre></div>
+
+
+<p>Why did that happen? Didn’t we just copy the original list?
+The truth is : we actually don’t have a completely independent copy in this case. The copy() function generates a shallow copy. To see what it does, let’s look at the ids of all the elements in my_list and the ids of all the elements in the copied list.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># for my_list</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="mi">140371873277424</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">([</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">140371873599288</span><span class="p">,</span> <span class="mi">13820176</span><span class="p">,</span> <span class="mi">13820152</span><span class="p">]</span>
+
+<span class="c1"># for another_list obtained by my_list.copy()</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">another_list</span><span class="p">)</span>
+<span class="mi">140371873317016</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">([</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">another_list</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">140371873599288</span><span class="p">,</span> <span class="mi">13820176</span><span class="p">,</span> <span class="mi">13820152</span><span class="p">]</span>
+</pre></div>
+
+
+<p>We see the ids of my_list and another_list are indeed different, indicating another_list is a copy. But the ids of the elements contained in another_list have the same ids as the elements in my_list . So the elements have not been copied!
+This is the property of shallow copy. It creates a new copy of the object but reuses the attributes and elements of the old copy. Thus, when you modify the elements of the new copy, you are modifying the elements of the old copy too.
+To solve this problem, we need to copy an object along with all its attributes and elements. This can be achieved by copy.deepcopy.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">another_list</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">my_list</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Deep copy is a quite time intensive operation and can take 1o times longer to complete compared to a shallow copy. But in some situations, it is unavoidable.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This brings me to the end of this discussion. To summarize, we have talked about the different scenarios which can arise in an assignment statement in Python. We found that:</p>
+<ul>
+<li>When the right hand side is a simple expression, a new copy is
+   created every time. There are some exceptions to this rule, which
+   depend on the implementation</li>
+<li>When the right hand side is an existing Python variable, then an
+   alias is created for the existing copy.</li>
+<li>When the right hand side is an operation, then the outcome depends on
+   the operation. In a simple case involving a tuple, we saw that an
+   independent copy was created. In the same case with lists, we saw
+   that the list was modified in place in one case (when we used
+   <strong>iadd</strong>) and a new copy was generated in another case (when we used <strong>add</strong>).</li>
+<li>List item</li>
+<li>Mutable objects can be copied but immutable objects cannot be copied
+   in a straightforward way. There is also no need to copy immutable
+   objects.</li>
+<li>To copy a mutable object along with all its attributes and elements,
+   we need to use deep copy.</li>
+</ul>
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> https://medium.com/broken-window/many-names-one-memory-address-122f78734cb6</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Start_Coding_With_Python/" title="Start Coding With Python" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Start Coding With Python
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../About/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Goga Patarkatsishvili
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ent1c3d" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.linkedin.com/in/ent1c3d/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
