@@ -640,38 +640,38 @@ f)  Boolean – In Python True and False  are boolean literals.  But the followi
 
 
 <p>You can think of it as putting the value assigned in a box with the variable name as shown below.
-<img alt="a1box." src="../../images/a1box.PNG" /></p>
+<img alt="a1box." src="../../images/a1box.png" /></p>
 <p>And for all the variables you create a new box is created with the variable name to hold the value. If you change the value of the variable the box will be updated with the new value. That means doing</p>
 <div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 </pre></div>
 
 
 <p>will result in</p>
-<p><img alt="a2box." src="../../images/a2box.PNG" /></p>
+<p><img alt="a2box." src="../../images/a2box.png" /></p>
 <p>Assigning one variable to another makes a copy of the value and put that value in the new box.</p>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
 </pre></div>
 
 
-<p><img alt="b2box." src="../../images/b2box.PNG" /> <img alt="a2box." src="../../images/a2box.PNG" /></p>
+<p><img alt="b2box." src="../../images/b2box.png" /> <img alt="a2box." src="../../images/a2box.png" /></p>
 <p>But in Python variables work more like tags unlike the boxes you have seen before. When you do an assignment in Python, it tags the value with the variable name.</p>
 <div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
 
-<p><img alt="a1tag." src="../../images/a1tag.PNG" /></p>
+<p><img alt="a1tag." src="../../images/a1tag.png" /></p>
 <p>and if you change the value of the varaible, it just changes the tag to the new value in memory. You dont need to do the housekeeping job of freeing the memory here. Python's Automatic Garbage Collection does it for you. When a value is without names/tags it is automatically removed from memory.</p>
 <div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
 
 
-<p><img alt="a2tag." src="../../images/a2tag.PNG" /></p>
+<p><img alt="a2tag." src="../../images/a2tag.png" /></p>
 <p>Assigning one variable to another makes a new tag bound to the same value as show below.</p>
 <div class="codehilite"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 </pre></div>
 
 
-<p><img alt="ab2tag." src="../../images/ab2tag.PNG" />
+<p><img alt="ab2tag." src="../../images/ab2tag.png" /><br />
 Other languages have 'variables'. Python has 'names'.</p>
 <h2 id="a-bit-about-pythons-memory-management">A bit about Python's memory management</h2>
 <p>As you have seen before, a value will have only one copy in memory and all the variables having this value will refer to this memory location. For example when you have variables a, b, c having a value 10, it doesn't mean that there will be 3 copy of 10s in memory. There will be only one 10 and all the variables a, b, c will point to this value. Once a variable is updated, say you are doing a += 1 a new value 11 will be allocated in memory and a will be pointing to this.</p>
