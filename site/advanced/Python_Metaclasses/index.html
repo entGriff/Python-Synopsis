@@ -1,0 +1,1280 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Python Study Guide">
+      
+      
+      
+        <meta name="author" content="Goga Patarkatsishvili">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Python Metaclasses - Python Synopsis</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Python Synopsis" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Advanced
+                </span>
+              
+            
+            Python Metaclasses
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Synopsis
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/Python_Programming_Lanuage/" title="The Python Programming Language, Implementation and Adventages" class="md-nav__link">
+      The Python Programming Language, Implementation and Adventages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/Python_Installation/" title="Python Installation" class="md-nav__link">
+      Python Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/Start_Coding_With_Python/" title="Start Coding With Python" class="md-nav__link">
+      Start Coding With Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/Datatype_And_Variables/" title="Datatype And Variables" class="md-nav__link">
+      Datatype And Variables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Python Metaclasses
+      </label>
+    
+    <a href="./" title="Python Metaclasses" class="md-nav__link md-nav__link--active">
+      Python Metaclasses
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#is-a-class-an-object-in-python" title="Is a Class an Object in Python?!" class="md-nav__link">
+    Is a Class an Object in Python?!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metaclasses" title="Metaclasses" class="md-nav__link">
+    Metaclasses
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-metaclass-to-create-a-class" title="Using Metaclass to Create a Class" class="md-nav__link">
+    Using Metaclass to Create a Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-metaclass-attribute" title="The metaclass Attribute" class="md-nav__link">
+    The metaclass Attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-and-initialization-of-a-metaclass" title="Creation and Initialization of a Metaclass" class="md-nav__link">
+    Creation and Initialization of a Metaclass
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-python-metaclasses-from-ionelmcro" title="Understanding Python metaclasses from Ionelmc.ro" class="md-nav__link">
+    Understanding Python metaclasses from Ionelmc.ro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-overview" title="A quick overview" class="md-nav__link">
+    A quick overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-metaclass-use" title="Simple metaclass use" class="md-nav__link">
+    Simple metaclass use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic-methods" title="Magic methods" class="md-nav__link">
+    Magic methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-slots" title="The slots" class="md-nav__link">
+    The slots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-attribute-lookup" title="Object attribute lookup" class="md-nav__link">
+    Object attribute lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-attribute-lookup" title="Class attribute lookup" class="md-nav__link">
+    Class attribute lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic-method-lookup" title="Magic method lookup" class="md-nav__link">
+    Magic method lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-new-method" title="The new method" class="md-nav__link">
+    The new method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-prepare-method" title="The prepare method" class="md-nav__link">
+    The prepare method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putting-it-all-together" title="Putting it all together" class="md-nav__link">
+    Putting it all together
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaclasses-are-callables" title="Metaclasses are callables" class="md-nav__link">
+    Metaclasses are callables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subclasses-inherit-the-metaclass" title="Subclasses inherit the metaclass" class="md-nav__link">
+    Subclasses inherit the metaclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrictions-with-multiple-metaclasses" title="Restrictions with multiple metaclasses" class="md-nav__link">
+    Restrictions with multiple metaclasses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-method-signatures" title="The method signatures" class="md-nav__link">
+    The method signatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#is-a-class-an-object-in-python" title="Is a Class an Object in Python?!" class="md-nav__link">
+    Is a Class an Object in Python?!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metaclasses" title="Metaclasses" class="md-nav__link">
+    Metaclasses
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-metaclass-to-create-a-class" title="Using Metaclass to Create a Class" class="md-nav__link">
+    Using Metaclass to Create a Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-metaclass-attribute" title="The metaclass Attribute" class="md-nav__link">
+    The metaclass Attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-and-initialization-of-a-metaclass" title="Creation and Initialization of a Metaclass" class="md-nav__link">
+    Creation and Initialization of a Metaclass
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-python-metaclasses-from-ionelmcro" title="Understanding Python metaclasses from Ionelmc.ro" class="md-nav__link">
+    Understanding Python metaclasses from Ionelmc.ro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-overview" title="A quick overview" class="md-nav__link">
+    A quick overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-metaclass-use" title="Simple metaclass use" class="md-nav__link">
+    Simple metaclass use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic-methods" title="Magic methods" class="md-nav__link">
+    Magic methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-slots" title="The slots" class="md-nav__link">
+    The slots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-attribute-lookup" title="Object attribute lookup" class="md-nav__link">
+    Object attribute lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-attribute-lookup" title="Class attribute lookup" class="md-nav__link">
+    Class attribute lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic-method-lookup" title="Magic method lookup" class="md-nav__link">
+    Magic method lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-new-method" title="The new method" class="md-nav__link">
+    The new method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-prepare-method" title="The prepare method" class="md-nav__link">
+    The prepare method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putting-it-all-together" title="Putting it all together" class="md-nav__link">
+    Putting it all together
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaclasses-are-callables" title="Metaclasses are callables" class="md-nav__link">
+    Metaclasses are callables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subclasses-inherit-the-metaclass" title="Subclasses inherit the metaclass" class="md-nav__link">
+    Subclasses inherit the metaclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrictions-with-multiple-metaclasses" title="Restrictions with multiple metaclasses" class="md-nav__link">
+    Restrictions with multiple metaclasses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-method-signatures" title="The method signatures" class="md-nav__link">
+    The method signatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="quick-tip-what-is-a-metaclass-in-python">Quick Tip: What Is a Metaclass in Python</h1>
+<p>This quick tip gives a brief overview of what we mean by a metaclass in Python and shows some examples of the concept.</p>
+<p>Before delving into this article, I should point out an important point <a href="http://code.tutsplus.com/tutorials/a-smooth-refresher-on-pythons-classes-and-objects--cms-25598">about classes in Python</a> which makes it easier for us to grasp the concept of metaclasses.</p>
+<h2 id="is-a-class-an-object-in-python">Is a Class an Object in Python?!</h2>
+<p>If you've used a programming language other than Python, the concept you understood about classes is most likely that it is a way used to create new objects. This is also true in Python, but Python even takes it one more step further—classes are also considered objects!</p>
+<p>So, if you created the following class in Python:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">myClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+
+<p>This simply means that an object with the name myClass has been created in memory. Since this object is able to create new objects, it is considered a class. This means we can apply object operations on classes in Python, as classes are objects themselves.</p>
+<p>We can thus do operations on classes like assigning the class to a variable, as follows:</p>
+<div class="codehilite"><pre><span></span><span class="n">class_object</span> <span class="o">=</span> <span class="n">myClass</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">class_object</span>
+</pre></div>
+
+
+<p>Which returns:</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">myClass</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x102623610</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>You can even pass the class <code>myClass</code> as a parameter to a method, as follows:</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">class_object</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">print</span> <span class="nb">object</span>
+
+<span class="n">class_object</span><span class="p">(</span><span class="n">myClass</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Which returns the following output:</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">myClass</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<p>In addition to other operations you can normally apply on objects.</p>
+<h2 id="metaclasses">Metaclasses</h2>
+<p>Maybe you have come across the <code>type</code> keyword in Python? You most likely used it to check the type of some object, as shown in the following examples:</p>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;abder&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="mf">100.0</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In which case you would get the following output:</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nb">type</span> <span class="s1">&#39;str&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">type</span> <span class="s1">&#39;int&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">type</span> <span class="s1">&#39;float&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">type</span> <span class="s1">&#39;type&#39;</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>Looking at the output, everything seems pretty clear until you come to the type type. To see what this might mean, let's go back to our class we defined at the beginning of this article:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">myClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+
+<p>Now, do the following:</p>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">myClass</span><span class="p">)</span>
+</pre></div>
+
+
+<p>What would be the output of this statement? It will surprisingly be:</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nb">type</span> <span class="s1">&#39;type&#39;</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>So, we can conclude that the type of classes in Python is <code>type</code>!</p>
+<p>What is the relation between a <code>type</code> and a <code>metaclass</code>? Well, a <code>type</code> is a <code>metaclass</code>, provided that the default <code>metaclass</code> is <code>type</code>. I know this might be confusing, especially that type can be used to return the class of some object as shown above, but this is due to the backward compatibility in Python. So, if you write:</p>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+</pre></div>
+
+
+<p>You will get:</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nb">type</span> <span class="s1">&#39;type&#39;</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>Meaning that a <code>type</code> is a <code>type</code>!</p>
+<p>The term <code>metaclass</code> simply means something used to create classes. In other words, it is the class of a class, meaning that the instance of a class in this case is a class. Thus, <code>type</code> is considered a <code>metaclass</code> since the instance of a <code>type</code> is a class.</p>
+<p>For instance, when we mentioned the following statement above:</p>
+<div class="codehilite"><pre><span></span><span class="n">class_object</span> <span class="o">=</span> <span class="n">myClass</span><span class="p">()</span>
+</pre></div>
+
+
+<p>This simply builds an object/instance of the class <code>myClass</code>. In other words, we used a class to create an object. </p>
+<p>In the same way, when we did the following:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">myClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+
+<p>The <code>metaclass</code> was used to create the class <code>myClass</code> (which is considered a <code>type</code>). So, like the object being an instance of a class, a class is an instance of a <code>metaclass</code>.</p>
+<h3 id="using-metaclass-to-create-a-class">Using Metaclass to Create a Class</h3>
+<p>In this section, we are going to see how we can use a <code>metaclass</code> to create a class, rather than using the <code>class</code> statement as we saw in the classes and objects tutorial. As we saw above, the default <code>metaclass</code> is <code>type</code>. Thus, we can use the following statement to create a new class:</p>
+<div class="codehilite"><pre><span></span><span class="n">new_class</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;myClass&#39;</span><span class="p">,(),{})</span>
+</pre></div>
+
+
+<p>If you want to make things simpler, you can assign the same class name myClass to the variable name.</p>
+<p>The dictionary <code>{ }</code> here is used to define the attributes of the class. So, having the following statement:</p>
+<div class="codehilite"><pre><span></span><span class="n">myClass</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;myClass&#39;</span><span class="p">,(),{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="bp">True</span><span class="p">})</span>
+</pre></div>
+
+
+<p>Is similar to:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">myClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+
+
+<h3 id="the-metaclass-attribute">The <strong>metaclass</strong> Attribute</h3>
+<p>Say that we created the class <code>myClass</code> as follows:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">myClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="vm">__metaclass__</span> <span class="o">=</span> <span class="n">myMetaClass</span>
+    <span class="k">pass</span>
+</pre></div>
+
+
+<p>In this case, class creation will occur using myMetaClass instead of type, as follows:</p>
+<div class="codehilite"><pre><span></span><span class="n">myClass</span> <span class="o">=</span> <span class="n">myMetaClass</span><span class="p">(</span><span class="n">className</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="creation-and-initialization-of-a-metaclass">Creation and Initialization of a Metaclass</h3>
+<p>If you want to have control on how you create and initialize a class after its creation, you can simply use the metaclass <strong>new</strong> method and <strong>init</strong> constructor, respectively. So, when myMetaClass above is called, this is what will be happening behind the scenes:</p>
+<div class="codehilite"><pre><span></span><span class="n">myClass</span> <span class="o">=</span> <span class="n">myMetaClass</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">myMetaClass</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">)</span>
+<span class="n">myMetaClass</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">myClass</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">)</span>
+</pre></div>
+
+
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> https://code.tutsplus.com/tutorials/quick-tip-what-is-a-metaclass-in-python--cms-26016</p>
+</blockquote>
+<hr />
+<h2 id="understanding-python-metaclasses-from-ionelmcro">Understanding Python metaclasses from Ionelmc.ro</h2>
+<h2 id="a-quick-overview">A quick overview</h2>
+<p>A high level explanation is necessary before we get down to the details.</p>
+<p>A class is an object, and just like any other object, it's an instance of something: a metaclass. The default metaclass is type. Unfortunately, due to backwards compatibility, type is a bit confusing: it can also be used as a function that return the class [13] of an object:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Foobar</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">Foobar</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">type</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">Foobar</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Foobar</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<p>If you're familiar with the isinstance builtin then you'll know this:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">Foobar</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">Foobar</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+<span class="bp">True</span>
+</pre></div>
+
+
+<p>To put this in picture:</p>
+<p><img alt="instance-of." src="../../images/instance-of.png" />  </p>
+<p>But lets go back to making classes ...</p>
+<h3 id="simple-metaclass-use">Simple metaclass use</h3>
+<p>We can use type directly to make a class, without any class statement:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">MyClass</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;MyClass&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">MyClass</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">MyClass</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<p>The class statement isn't just syntactic sugar, it does some extra things, like setting an adequate <strong>qualname</strong> and <strong>doc</strong> properties or calling <strong>prepare</strong>.</p>
+<p>We can make a custom metaclass:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Meta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+</pre></div>
+
+
+<p>And then we can use it :</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Complex</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Meta</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">Complex</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Meta</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<p>Now we got a rough idea of what we'll be dealing with ...</p>
+<h3 id="magic-methods">Magic methods</h3>
+<p>One distinctive feature of Python is magic methods: they allow the programmer to override behavior for various operators and behavior of objects. To override the call operator you'd do this:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Funky</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Look at me, I work like a function!&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">Funky</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">()</span>
+<span class="n">Look</span> <span class="n">at</span> <span class="n">me</span><span class="p">,</span> <span class="n">I</span> <span class="n">work</span> <span class="n">like</span> <span class="n">a</span> <span class="n">function</span><span class="err">!</span>
+</pre></div>
+
+
+<p>Metaclasses rely on several magic methods so it's quite useful to know a bit more about them.</p>
+<h3 id="the-slots">The slots</h3>
+<p>When you define a magic method in your class the function will end up as a pointer in a struct that describes the class, in addition to the entry in <strong>dict</strong>. That struct [7] has a field for each magic method. For some reason these fields are called type slots.</p>
+<p>Now there's another feature, implemented via the <strong>slots</strong> attribute. A class with <strong>slots</strong> will create instances that don't have a <strong>dict</strong> (they use a little bit less memory). A side-effect of this is that instances cannot have other fields than what was specified in <strong>slots</strong>: if you try to set an unexpected field you'll get an exception.</p>
+<p>For the scope of this article when slots are mentioned it will mean the type slots, not <strong>slots</strong>.</p>
+<h3 id="object-attribute-lookup">Object attribute lookup</h3>
+<p>Now this is something that's easy to get wrong because of the many slight differences to old-style objects in Python 2. </p>
+<p>Assuming Class is the class and instance is an instance of Class, evaluating instance.foobar roughly equates to this:</p>
+<ul>
+<li>Call the type slot for Class.<strong>getattribute</strong> (tp_getattro). The default does this:  <ul>
+<li>Does Class.<strong>dict</strong> have a foobar item that is a data descriptor ?    <ul>
+<li>If yes, return the result of Class.<strong>dict</strong>['foobar'].<strong>get</strong>(instance, Class).  </li>
+</ul>
+</li>
+<li>Does instance.<strong>dict</strong> have a foobar item in it?     <ul>
+<li>If yes, return instance.<strong>dict</strong>['foobar'].  </li>
+</ul>
+</li>
+<li>Does Class.<strong>dict</strong> have a foobar item that is not a data descriptor ? <ul>
+<li>If yes, return the result of Class.<strong>dict</strong>['foobar'].<strong>get</strong>(instance, klass).   </li>
+</ul>
+</li>
+<li>Does Class.<strong>dict</strong> have a foobar item ? <ul>
+<li>If yes, return the result of Class.<strong>dict</strong>['foobar'].   </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If the attribute still wasn't found, and there's a Class.<strong>getattr</strong>, call Class.<strong>getattr</strong>('foobar').</li>
+</ul>
+<p>Still not clear? Perhaps a diagram normal attribute lookup helps:
+<img alt="object-attribute-lookup." src="../../images/object-attribute-lookup.png" /></p>
+<blockquote>
+<p>To avoid creating confusions with the “.” operator doing crazy things I've used “:” in this diagram to signify the location.</p>
+</blockquote>
+<h3 id="class-attribute-lookup">Class attribute lookup</h3>
+<p>Because classes needs to be able support the classmethod and staticmethod properties [6] when you evaluate something like Class.foobar the lookup is slightly different than what would happen when you evaluate instance.foobar.</p>
+<p>Assuming Class is an instance of Metaclass, evaluating Class.foobar roughly equates to this:</p>
+<ul>
+<li>Call the type slot for Metaclass.<strong>getattribute</strong> (tp_getattro). The default does this: <ul>
+<li>Does Metaclass.<strong>dict</strong> have a foobar item that is a data descriptor ?<ul>
+<li>If yes, return the result of Metaclass.<strong>dict</strong>['foobar'].<strong>get</strong>(Class, Metaclass).   </li>
+</ul>
+</li>
+<li>Does Class.<strong>dict</strong> have a foobar item that is a descriptor (of any kind)?<ul>
+<li>If yes, return the result of Class.<strong>dict</strong>['foobar'].<strong>get</strong>(None, Class). </li>
+</ul>
+</li>
+<li>Does Class.<strong>dict</strong> have a foobar item in it?<ul>
+<li>If yes, return Class.<strong>dict</strong>['foobar'].</li>
+</ul>
+</li>
+<li>Does Metaclass.<strong>dict</strong> have a foobar item that is not a data descriptor ?<ul>
+<li>If yes, return the result of Metaclass.<strong>dict</strong>['foobar'].<strong>get</strong>(Class, Metaclass).</li>
+</ul>
+</li>
+<li>Does Metaclass.<strong>dict</strong> have any foobar item?<ul>
+<li>If yes, return Metaclass.<strong>dict</strong>['foobar'].</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If the attribute still wasn't found, and there's a Metaclass.<strong>getattr</strong>, call Metaclass.<strong>getattr</strong>('foobar').</li>
+</ul>
+<p>The whole shebang would look like this in a diagram:
+<img alt="class-attribute-lookup." src="../../images/class-attribute-lookup.png" /></p>
+<blockquote>
+<p>To avoid creating confusions with the “.” operator doing crazy things I've used “:” in this diagram to signify the location.</p>
+</blockquote>
+<h3 id="magic-method-lookup">Magic method lookup</h3>
+<p>For magic methods the lookup is done on the class, directly in the big struct with the slots:</p>
+<ul>
+<li>Does the object's class have a slot for that magic method (roughly object-&gt;ob_type-&gt;tp_<magicmethod> in C code)? If yes, use it. If it's NULL then the operation is not supported.</li>
+</ul>
+<blockquote>
+<p>In C internals parlance:
+  -  object-&gt;ob_type is the class of the object. <br />
+    - ob_type-&gt;tp_<magicmethod> is the type slot.</p>
+</blockquote>
+<p>This looks much simpler, however, the type slots are filled with wrappers around your functions, so descriptors work as expected:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Magic</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nd">@property</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+<span class="o">...</span>             <span class="k">return</span> <span class="s2">&quot;It works!&quot;</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="n">inner</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">repr</span><span class="p">(</span><span class="n">Magic</span><span class="p">())</span>
+<span class="s1">&#39;It works!&#39;</span>
+</pre></div>
+
+
+<p>Thats it. Does that mean there are places that don't follow those rules and lookup the slot differently? Sadly yes, read on ...</p>
+<h3 id="the-new-method">The <strong>new</strong> method</h3>
+<p>One of the most common point of confusion with both classes and metaclasses is the <strong>new</strong> method. It has some very special conventions.</p>
+<p>The <strong>new</strong> method is the constructor (it returns the new instance) while <strong>init</strong> is just a initializer (the instance is already created when <strong>init</strong> is called).</p>
+<p>Suppose have a class like this:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Foobar</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Now if you recall the previous section, you'd expect that   __new__ would be looked up on the metaclass, but alas, it wouldn't be so useful that way  so it's looked up statically.</p>
+<p>When the Foobar class wants this magic method it will be looked up on the same object (the class), not on a upper level like all the other magic methods. This is very important to understand, because both the class and the metaclass can define this method:</p>
+<ul>
+<li>Foobar.__new__ is used to create instances of Foobar</li>
+<li>type.__new__ is used to create the Foobar class (an instance of type in the example)</li>
+</ul>
+<h3 id="the-prepare-method">The <strong>prepare</strong> method</h3>
+<p>This method is called before the class body is executed and it must return a dictionary-like object that's used as the local namespace for all the code from the class body. It was added in Python 3.0, see <a href="https://www.python.org/dev/peps/pep-3115/">PEP-3115</a>.</p>
+<p>If your __prepare__ returns an object x then this:</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Class</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Meta</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+
+<p>Will make the following changes to x:</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+
+<p>This x object needs to look like a dictionary. Note that this x object will end up as an argument to Metaclass.__new<strong> and if it's not an instance of dict you need to convert it before calling super().__new</strong>.</p>
+<p>Interestingly enough this method doesn't have __new__'s special lookup. It appears it doesn't have it's own type slot and it's looked up via the class attribute lookup, if you read back a bit. </p>
+<h3 id="putting-it-all-together">Putting it all together</h3>
+<p>To start things off, a diagram of how instances are constructed:
+<img alt="instance-creation." src="../../images/instance-creation.png" /></p>
+<p>How to read this swim lane diagram:  </p>
+<ul>
+<li>The horizontal lanes is the place where you define the functions.</li>
+<li>Solid lines mean a function call.<ul>
+<li>A line from Metaclass.__call<strong> to Class.__new</strong> means Metaclass.__call<strong> will call Class.__new</strong>.</li>
+</ul>
+</li>
+<li>Dashed lines means something is returned.<ul>
+<li>Class.<strong>new</strong> returns the instance of Class.</li>
+<li>Metaclass.<strong>call</strong> returns whatever Class.<strong>new</strong> returned (and if it returned an instance of Class it will also call Class.<strong>init</strong> on it). </li>
+</ul>
+</li>
+<li>The number in the red circle signifies the call order.</li>
+</ul>
+<p>Creating a class is quite similar:
+<img alt="class-creation." src="../../images/class-creation.png" /></p>
+<p>Few more notes:
+-   Metaclass.<strong>prepare</strong> just returns the namespace object (a dictionary-like object as explained before).
+-   Metaclass.<strong>new</strong> returns the Class object.
+-   MetaMetaclass.<strong>call</strong> returns whatever Metaclass.<strong>new</strong> returned (and if it returned an instance of Metaclass it will also call Metaclass.<strong>init</strong> on it). </p>
+<p>So you see, metaclasses allow you to customize almost every part of an object life-cycle.</p>
+<h3 id="metaclasses-are-callables">Metaclasses are callables</h3>
+<p>If you look again at the diagrams, you'll notice that making an instance goes through Metaclass.<strong>call</strong>. This means you can use any callable as the metaclass:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="k">print</span><span class="p">):</span>  <span class="c1"># pointless, but illustrative</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="n">Foo</span> <span class="p">()</span> <span class="p">{</span><span class="s1">&#39;__module__&#39;</span><span class="p">:</span> <span class="s1">&#39;__main__&#39;</span><span class="p">,</span> <span class="s1">&#39;__qualname__&#39;</span><span class="p">:</span> <span class="s1">&#39;Foo&#39;</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
+<span class="bp">None</span>
+</pre></div>
+
+
+<p>If you use a function as the metaclass then subclasses won't inherit your function metaclass, but the type of whatever that function returned.</p>
+<h3 id="subclasses-inherit-the-metaclass">Subclasses inherit the metaclass</h3>
+<p>One advantage compared to class decorators is the fact that subclasses inherit the metaclass.</p>
+<p>This is a consequence of the fact that Metaclass(...) returns an object which usually has Metaclass as the <strong>class</strong>.</p>
+<h3 id="restrictions-with-multiple-metaclasses">Restrictions with multiple metaclasses</h3>
+<p>In the same tone of classes allowing you to have multiple baseclasses, each one of those baseclasses may have a different metaclass. But with a twist: everything has to be linear - the inheritance tree must have a single leaf.</p>
+<p>For example, this is not accepted because there would be two leafs (Meta1 and Meta2):</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Meta1</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Meta2</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Base1</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Meta1</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Base2</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Meta2</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Foobar</span><span class="p">(</span><span class="n">Base1</span><span class="p">,</span> <span class="n">Base2</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">metaclass</span> <span class="n">conflict</span><span class="p">:</span> <span class="n">the</span> <span class="n">metaclass</span> <span class="n">of</span> <span class="n">a</span> <span class="n">derived</span> <span class="k">class</span> <span class="nc">must</span> <span class="n">be</span> <span class="n">a</span> <span class="p">(</span><span class="n">non</span><span class="o">-</span><span class="n">strict</span><span class="p">)</span> <span class="n">subclass</span> <span class="n">of</span> <span class="n">the</span> <span class="n">metaclasses</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">its</span> <span class="n">bases</span>
+</pre></div>
+
+
+<p>This will work (and will use the leaf as the metaclass):</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Meta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">SubMeta</span><span class="p">(</span><span class="n">Meta</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Base1</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Meta</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Base2</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">SubMeta</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Foobar</span><span class="p">(</span><span class="n">Base1</span><span class="p">,</span> <span class="n">Base2</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">Foobar</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">SubMeta</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<h3 id="the-method-signatures">The method signatures</h3>
+<p>There are still few important details missing, like the method signatures. Lets look at class and metaclass with all the important stuff implemented.</p>
+<p>Note the extra **kwargs - those are the extra keywords arguments you can pass in the class statement. </p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Meta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+<span class="o">...</span>     <span class="nd">@classmethod</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">__prepare__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;  Meta.__prepare__(mcs=</span><span class="si">%s</span><span class="s1">, name=</span><span class="si">%r</span><span class="s1">, bases=</span><span class="si">%s</span><span class="s1">, **</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">kwargs</span>
+<span class="o">...</span>         <span class="p">))</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="p">{}</span>
+</pre></div>
+
+
+<p>As mentioned before, __prepare<strong> can return objects that are not dict instances, so you need to make sure your __new</strong> handles that.</p>
+<div class="codehilite"><pre><span></span><span class="o">...</span>     <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;  Meta.__new__(mcs=</span><span class="si">%s</span><span class="s1">, name=</span><span class="si">%r</span><span class="s1">, bases=</span><span class="si">%s</span><span class="s1">, attrs=[</span><span class="si">%s</span><span class="s1">], **</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">attrs</span><span class="p">),</span> <span class="n">kwargs</span>
+<span class="o">...</span>         <span class="p">))</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</pre></div>
+
+
+<p>It's uncommon to see <strong>init</strong> being implemented in a metaclass because it's not that powerful - the class is already constructed when <strong>init</strong> is called. It roughly equates to having a class decorator with the difference that <strong>init</strong> would get run when making subclasses, while class decorators are not called for subclasses.</p>
+<div class="codehilite"><pre><span></span><span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;  Meta.__init__(cls=</span><span class="si">%s</span><span class="s1">, name=</span><span class="si">%r</span><span class="s1">, bases=</span><span class="si">%s</span><span class="s1">, attrs=[</span><span class="si">%s</span><span class="s1">], **</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">attrs</span><span class="p">),</span> <span class="n">kwargs</span>
+<span class="o">...</span>         <span class="p">))</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The __call__ method will be called when you make instances of Class.</p>
+<div class="codehilite"><pre><span></span><span class="o">...</span>     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;  Meta.__call__(cls=</span><span class="si">%s</span><span class="s1">, args=</span><span class="si">%s</span><span class="s1">, kwargs=</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="bp">cls</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span>
+<span class="o">...</span>         <span class="p">))</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+
+
+<p>Using Meta, note the extra=1: </p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Class</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Meta</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">myarg</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;  Class.__new__(cls=</span><span class="si">%s</span><span class="s1">, myarg=</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="bp">cls</span><span class="p">,</span> <span class="n">myarg</span>
+<span class="o">...</span>         <span class="p">))</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">myarg</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;  Class.__init__(self=</span><span class="si">%s</span><span class="s1">, myarg=</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="p">,</span> <span class="n">myarg</span>
+<span class="o">...</span>         <span class="p">))</span>
+<span class="o">...</span>         <span class="bp">self</span><span class="o">.</span><span class="n">myarg</span> <span class="o">=</span> <span class="n">myarg</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="s2">&quot;&lt;instance of Class; myargs=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span>
+<span class="o">...</span>             <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;myarg&#39;</span><span class="p">,</span> <span class="s1">&#39;MISSING&#39;</span><span class="p">),</span>
+<span class="o">...</span>         <span class="p">)</span>
+  <span class="n">Meta</span><span class="o">.</span><span class="n">__prepare__</span><span class="p">(</span><span class="n">mcs</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Meta</span><span class="s1">&#39;&gt;, name=&#39;</span><span class="n">Class</span><span class="s1">&#39;, bases=(),</span>
+                   <span class="o">**</span><span class="p">{</span><span class="s1">&#39;extra&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+  <span class="n">Meta</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Meta</span><span class="s1">&#39;&gt;, name=&#39;</span><span class="n">Class</span><span class="s1">&#39;, bases=(),</span>
+               <span class="n">attrs</span><span class="o">=</span><span class="p">[</span><span class="n">__qualname__</span><span class="p">,</span> <span class="fm">__new__</span><span class="p">,</span> <span class="fm">__init__</span><span class="p">,</span> <span class="fm">__str__</span><span class="p">,</span> <span class="vm">__module__</span><span class="p">],</span>
+               <span class="o">**</span><span class="p">{</span><span class="s1">&#39;extra&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+  <span class="n">Meta</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">cls</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Class</span><span class="s1">&#39;&gt;, name=&#39;</span><span class="n">Class</span><span class="s1">&#39;, bases=(),</span>
+                <span class="n">attrs</span><span class="o">=</span><span class="p">[</span><span class="n">__qualname__</span><span class="p">,</span> <span class="fm">__new__</span><span class="p">,</span> <span class="fm">__init__</span><span class="p">,</span> <span class="fm">__str__</span><span class="p">,</span> <span class="vm">__module__</span><span class="p">],</span>
+                <span class="o">**</span><span class="p">{</span><span class="s1">&#39;extra&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+
+
+<p>Note that Meta.__call__ is called when we make instance of Class:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">Class</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">Meta</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">cls</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Class</span><span class="s1">&#39;&gt;, args=(1,), kwargs={})</span>
+  <span class="n">Class</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Class</span><span class="s1">&#39;&gt;, myarg=1)</span>
+  <span class="n">Class</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">=&lt;</span><span class="n">instance</span> <span class="n">of</span> <span class="n">Class</span><span class="p">;</span> <span class="n">myargs</span><span class="o">=</span><span class="n">MISSING</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">myarg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">instance</span> <span class="n">of</span> <span class="n">Class</span><span class="p">;</span> <span class="n">myargs</span><span class="o">=</span><span class="mi">1</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> https://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../beginner/Datatype_And_Variables/" title="Datatype And Variables" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Datatype And Variables
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../About/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Goga Patarkatsishvili
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ent1c3d" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.linkedin.com/in/ent1c3d/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
