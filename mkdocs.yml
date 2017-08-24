@@ -17,6 +17,8 @@ pages:
         - Python Installation : beginner/Python_Installation.md
         - Start Coding With Python : beginner/Start_Coding_With_Python.md
         - Datatype And Variables : beginner/Datatype_And_Variables.md
+    - Intermediate:
+        - Python Metaclasses   : intermediate/Python_Metaclasses.md 
     - About: About.md
 
 # Documentation and theme
