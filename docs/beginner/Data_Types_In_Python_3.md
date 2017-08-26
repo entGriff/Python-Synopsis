@@ -238,5 +238,193 @@ Once you have a solid grasp of data types available to you in Python, you can le
 
 ----------------
 
-<blockquote class="embedly-card"><h4><a href="https://www.scribd.com/document/230788609/%E1%83%92%E1%83%A3%E1%83%A0%E1%83%90%E1%83%9B-%E1%83%93%E1%83%9D%E1%83%A9%E1%83%90%E1%83%9C%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98-%E1%83%A1%E1%83%90%E1%83%9B%E1%83%9D%E1%83%A1%E1%83%94%E1%83%9A%E1%83%98-%E1%83%9E%E1%83%98%E1%83%A0%E1%83%95%E1%83%94%E1%83%9A%E1%83%98">გურამ დოჩანაშვილი - სამოსელი პირველი</a></h4><p>გურამ დოჩანაშვილი - სამოსელი პირველი - Free ebook download as PDF File (.pdf), Text File (.txt) or read book online for free.</p></blockquote>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+## Native Datatypes By Dive Into Python 3
+<iframe src="https://drive.google.com/file/d/0BwXrZIeDwZQIeG9nY2lIV0w0cG8/preview" width="640" height="480"></iframe>
+
+
+> **Source:**   
+> :fa-book: **Dive into Python 3** by Mark Pilgrim    
+
+
+## Standard Data Types By Tutorialspoint
+
+The data stored in memory can be of many types. For example, a person's age is stored as a numeric value and his or her address is stored as alphanumeric characters. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.
+
+Python has five standard data types :   
+
+- Numbers
+
+- String
+
+- List
+
+- Tuple
+
+- Dictionary
+
+## Python Numbers
+Number data types store numeric values. Number objects are created when you assign a value to them. For example −
+```python	
+var1 = 1
+var2 = 10
+```
+You can also delete the reference to a number object by using the del statement. The syntax of the del statement is −
+
+```python	
+del var1[,var2[,var3[....,varN]]]]
+```
+You can delete a single object or multiple objects by using the del statement.
+
+For example −
+```python	
+del var
+del var_a, var_b
+```
+
+Python supports three different numerical types −
+- int (signed integers)
+
+- float (floating point real values)
+
+- complex (complex numbers)
+
+All integers in Python3 are represented as long integers. Hence, there is no separate number type as long.
+
+int  | float | complex   
+------|------|------
+**10** | **0.0**| **3.14j**
+**100**| **15.20**| **45.j**
+**-786**| **-21.9**	| **9.322e-36j**
+
+A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x and y are real numbers and j is the imaginary unit.
+
+### Python Strings
+Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows either pair of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 to the end.
+
+The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example −
+```python	
+#!/usr/bin/python3
+
+str = 'Hello World!'
+
+print (str)          # Prints complete string
+print (str[0])       # Prints first character of the string
+print (str[2:5])     # Prints characters starting from 3rd to 5th
+print (str[2:])      # Prints string starting from 3rd character
+print (str * 2)      # Prints string two times
+print (str + "TEST") # Prints concatenated string
+```
+
+This will produce the following result −
+
+```python	
+Hello World!
+H
+llo
+llo World!
+Hello World!Hello World!
+Hello World!TEST
+```
+### Python Lists
+Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to arrays in C. One of the differences between them is that all the items belonging to a list can be of different data type.
+
+The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. For example −
+```python	
+#!/usr/bin/python3
+
+list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+tinylist = [123, 'john']
+
+print (list)          # Prints complete list
+print (list[0])       # Prints first element of the list
+print (list[1:3])     # Prints elements starting from 2nd till 3rd 
+print (list[2:])      # Prints elements starting from 3rd element
+print (tinylist * 2)  # Prints list two times
+print (list + tinylist) # Prints concatenated lists
+```
+This produces the following result −
+```python	
+['abcd', 786, 2.23, 'john', 70.200000000000003]
+abcd
+[786, 2.23]
+[2.23, 'john', 70.200000000000003]
+[123, 'john', 123, 'john']
+['abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john']
+```
+
+### Python Tuples
+A tuple is another sequence data type that is similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parenthesis.
+
+The main difference between lists and tuples are − Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as read-only lists. For example −
+
+```python	
+#!/usr/bin/python3
+
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+tinytuple = (123, 'john')
+
+print (tuple)           # Prints complete tuple
+print (tuple[0])        # Prints first element of the tuple
+print (tuple[1:3])      # Prints elements starting from 2nd till 3rd 
+print (tuple[2:])       # Prints elements starting from 3rd element
+print (tinytuple * 2)   # Prints tuple two times
+print (tuple + tinytuple) # Prints concatenated tuple
+```
+
+This produces the following result −
+
+```python	
+('abcd', 786, 2.23, 'john', 70.200000000000003)
+abcd
+(786, 2.23)
+(2.23, 'john', 70.200000000000003)
+(123, 'john', 123, 'john')
+('abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john')
+```
+The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists −
+
+```python	
+#!/usr/bin/python3
+
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+list = [ 'abcd', 786 , 2.23, 'john', 70.2  ]
+tuple[2] = 1000    # Invalid syntax with tuple
+list[2] = 1000     # Valid syntax with list
+```
+
+
+### Python Dictionary
+
+Python's dictionaries are kind of hash-table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+
+Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example −
+```python	
+#!/usr/bin/python3
+
+dict = {}
+dict['one'] = "This is one"
+dict[2]     = "This is two"
+
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+
+
+print (dict['one'])       # Prints value for 'one' key
+print (dict[2])           # Prints value for 2 key
+print (tinydict)          # Prints complete dictionary
+print (tinydict.keys())   # Prints all the keys
+print (tinydict.values()) # Prints all the values
+```
+
+This produces the following result −
+```python	
+This is one
+This is two
+{'name': 'john', 'dept': 'sales', 'code': 6734}
+dict_keys(['name', 'dept', 'code'])
+dict_values(['john', 'sales', 6734])
+```
+Dictionaries have no concept of order among the elements. It is incorrect to say that the elements are "out of order"; they are simply unordered.
+
+
+> **Source:**   
+> :fa-link: https://www.tutorialspoint.com/python3/python_variable_types.htm

@@ -15,6 +15,7 @@ Of course, it needs plenty of time to organize best resources based on the topic
     - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Python_Programming_Lanuage)
     - [Python Installation](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Python_Installation)
     - [Start Coding With Python](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Start_Coding_With_Python)
+    - [Data Types In Python 3](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Data_Types_In_Python_3)
     - [Datatype And Variables](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Datatype_And_Variables)
     - ...
 - Intermediate
