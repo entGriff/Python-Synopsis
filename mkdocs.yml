@@ -16,6 +16,7 @@ pages:
         - The Python Programming Language, Implementation and Adventages : beginner/Python_Programming_Lanuage.md
         - Python Installation : beginner/Python_Installation.md
         - Start Coding With Python : beginner/Start_Coding_With_Python.md
+        - Data Types in Python 3 : beginner/Data_Types_In_Python_3.md
         - Datatype And Variables : beginner/Datatype_And_Variables.md
     - Advanced:
         - Python Metaclasses   : advanced/Python_Metaclasses.md 

@@ -66,12 +66,12 @@ this statements tells the python to evaluate all the expression on the right and
 ```
 
 ## Python Data Types
-Python has 5 standard data types namely.
-a) [Numbers](http://thepythonguru.com/python-numbers/)
-b) [String](http://thepythonguru.com/python-strings/)
-c)  [List](http://thepythonguru.com/python-lists/)
-d) [Tuple](http://thepythonguru.com/python-tuples/)
-e) [Dictionary](http://thepythonguru.com/python-dictionaries/)
+Python has 5 standard data types namely.  
+a) [Numbers](http://thepythonguru.com/python-numbers/)  
+b) [String](http://thepythonguru.com/python-strings/)  
+c) [List](http://thepythonguru.com/python-lists/)  
+d) [Tuple](http://thepythonguru.com/python-tuples/)  
+e) [Dictionary](http://thepythonguru.com/python-dictionaries/)  
 f)  Boolean – In Python True and False  are boolean literals.  But the following values are also considered as false.
 
 **[] – empty list , () – empty tuple , {} – empty dictionary** 
