@@ -1,4 +1,4 @@
-# Datatype & Variables
+# Variables and Assignment
 
 Variables are named locations which are used to store references to the object stored in memory. The names we choose for variables and functions are commonly known as Identifiers. In python Identifiers must obey the following rules.
 
