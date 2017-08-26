@@ -232,4 +232,11 @@ You can learn about each of the data types above in more detail by reading the f
 
 Once you have a solid grasp of data types available to you in Python, you can learn how to [convert data types](https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-python-3).
 
-</div>
+> **Source:**   
+> :fa-link: https://www.digitalocean.com/community/tutorials/understanding-data-types-in-python-3
+
+
+----------------
+
+<blockquote class="embedly-card"><h4><a href="https://www.scribd.com/document/230788609/%E1%83%92%E1%83%A3%E1%83%A0%E1%83%90%E1%83%9B-%E1%83%93%E1%83%9D%E1%83%A9%E1%83%90%E1%83%9C%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98-%E1%83%A1%E1%83%90%E1%83%9B%E1%83%9D%E1%83%A1%E1%83%94%E1%83%9A%E1%83%98-%E1%83%9E%E1%83%98%E1%83%A0%E1%83%95%E1%83%94%E1%83%9A%E1%83%98">გურამ დოჩანაშვილი - სამოსელი პირველი</a></h4><p>გურამ დოჩანაშვილი - სამოსელი პირველი - Free ebook download as PDF File (.pdf), Text File (.txt) or read book online for free.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
