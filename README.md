@@ -29,3 +29,27 @@ So, You can start study from here:
     - ...
     - [Python Metaclasses](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Python_Metaclasses)
     - ...  
+
+
+### Bibliography    
+- Books :
+    - **How To Code in Python 3** by Lisa Tagliaferri
+    - **Dive into Python 3** by Mark Pilgrim
+    - **Learning Python, Fourth Edition** by Mark Lutz  
+    - **Think Python** by Allen B. Downey  
+    - **Learn Python The  Hard Way** by Zed A. Shaw    
+    - **Python In A Nutshell, Second Edition** by Alex Martelli
+    - **Bioinformatics Programming Using Python** by Mitchell L Model
+    - **Python 3 Object-oriented Programming, Second Edition** by Dusty Phillips
+- Sites:    
+    - **https://www.tutorialspoint.com/python3/**
+    - **https://stackoverflow.com/**
+    - **https://en.wikiversity.org/**
+    - **http://pythoncentral.io**
+    - **http://thepythonguru.com**
+    - **https://code.tutsplus.com**
+- Articles :
+    - **Assignment statements in Python are more interesting than you might think** by Dibya Chakravorty
+    - **Understanding Python variables and Memory Management** by Sreejith Kesavan
+    - **Quick Tip: What Is a Metaclass in Python?** by Abder-Rahman Ali
+    - **Understanding Python metaclasses** by Ionel Cristian Mărieș
