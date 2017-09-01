@@ -141,3 +141,8 @@ We mentioned in the beginning that slots are preventing a waste of space with ob
 
 ### answers from stackoverflow :
 https://stackoverflow.com/questions/472000/usage-of-slots
+
+## what means name mangling in python
+http://radek.io/2011/07/21/private-protected-and-public-in-python/
+### answers from stackoverflow :
+https://stackoverflow.com/questions/7456807/python-name-mangling
