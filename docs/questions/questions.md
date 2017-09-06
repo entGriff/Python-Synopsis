@@ -146,3 +146,15 @@ https://stackoverflow.com/questions/472000/usage-of-slots
 http://radek.io/2011/07/21/private-protected-and-public-in-python/
 ### answers from stackoverflow :
 https://stackoverflow.com/questions/7456807/python-name-mangling
+
+
+## Python - dir() - how can I differentiate between functions/method and simple attributes?
+
+To show a list of the defined names in a module, for example the math module, and their types you could do:
+```python	
+[(name,type(getattr(math,name))) for name in dir(math)]
+```
+getattr(math,name) returns the object (function, or otherwise) from the math module, named by the value of the string in the variable "name". For example type(getattr(math,'pi')) is 'float'
+
+> **Source:**   
+> :fa-link: https://stackoverflow.com/questions/26818007/python-dir-how-can-i-differentiate-between-functions-method-and-simple-att
