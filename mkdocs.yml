@@ -18,6 +18,7 @@ pages:
         - Start Coding With Python : beginner/Start_Coding_With_Python.md
         - Data Types in Python 3 : beginner/Data_Types_In_Python_3.md
         - Variables and Assignment : beginner/Variables_And_Assignment.md
+        - Functions : beginner/Functions.md
     - Advanced:
         - Python Metaclasses   : advanced/Python_Metaclasses.md 
     - About: About.md
