@@ -1219,17 +1219,40 @@ Functions are the most basic program structure Python provides for maximizing co
 reuse and minimizing code redundancy. As we’ll see, functions are also a design tool
 that lets us split complex systems into manageable parts. Table 16-1 summarizes the
 primary function-related tools we’ll study in this part of the book.</p>
-<div class="codehilite"><pre><span></span>Statement  | Examples |
-</pre></div>
-
-
-<p>------|------|
-<strong>Calls</strong> | <strong>myfunc('spam', 'eggs', meat=ham)</strong>|
-<strong>def, return</strong>| def adder(a, b=1, <em>c): return a + b + c[0]| 
-<strong>global</strong>| def changer():global x; x = 'new'   | 
-<strong>nonlocal</strong>| def changer():nonlocal x; x = 'new'|
-<strong>yield</strong>| def squares(x):for i in range(x): yield i <strong> 2 |
-</strong>lambda<strong>| funcs = [lambda x: x</strong>2, lambda x: x</em>3]</p>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Calls</strong></td>
+<td><strong>myfunc('spam', 'eggs', meat=ham)</strong></td>
+</tr>
+<tr>
+<td><strong>def, return</strong></td>
+<td>def adder(a, b=1, *c): return a + b + c[0]</td>
+</tr>
+<tr>
+<td><strong>global</strong></td>
+<td>def changer():global x; x = 'new'</td>
+</tr>
+<tr>
+<td><strong>nonlocal</strong></td>
+<td>def changer():nonlocal x; x = 'new'</td>
+</tr>
+<tr>
+<td><strong>yield</strong></td>
+<td>def squares(x):for i in range(x): yield i ** 2</td>
+</tr>
+<tr>
+<td><strong>lambda</strong></td>
+<td>funcs = [lambda x: x*<em>2, lambda x: x</em>3]</td>
+</tr>
+</tbody>
+</table>
 <h3 id="why-use-functions">Why Use Functions?</h3>
 <p>Before we get into the details, let’s establish a clear picture of what functions are all
 about. Functions are a nearly universal program-structuring device. You may have

@@ -392,7 +392,7 @@ that lets us split complex systems into manageable parts. Table 16-1 summarizes 
 primary function-related tools we’ll study in this part of the book.
 
 
-    Statement  | Examples |
+Statement  | Examples |
 ------|------|
 **Calls** | **myfunc('spam', 'eggs', meat=ham)**|
 **def, return**| def adder(a, b=1, *c): return a + b + c[0]| 
