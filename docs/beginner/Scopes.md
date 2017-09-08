@@ -112,6 +112,7 @@ names and objects clear: changing an object is not an assignment to a name.
 
 
 
-
 > **Source:**   
 > :fa-book:  **Learning Python, Fourth Edition** by Mark Lutz  - 2009
+
+good resource : http://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html
