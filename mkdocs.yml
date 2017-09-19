@@ -20,6 +20,7 @@ pages:
         - Variables and Assignment : beginner/Variables_And_Assignment.md
         - Functions : beginner/Functions.md
     - Advanced:
+        - Context Managers   : advanced/Context_Managers.md 
         - Python Metaclasses   : advanced/Python_Metaclasses.md 
     - About: About.md
 

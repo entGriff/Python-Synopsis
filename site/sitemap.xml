@@ -52,6 +52,12 @@
     
         
     <url>
+     <loc>/advanced/Context_Managers/</loc>
+     <lastmod>2017-09-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/advanced/Python_Metaclasses/</loc>
      <lastmod>2017-09-19</lastmod>
      <changefreq>daily</changefreq>
