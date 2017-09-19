@@ -29,6 +29,7 @@ So, You can start study from here:
     - ... 
 - Advanced
     - ...
+    - [Contect Managers](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Context_Managers)
     - [Python Metaclasses](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Python_Metaclasses)
     - ...  
 
@@ -55,3 +56,4 @@ So, You can start study from here:
     - **Understanding Python variables and Memory Management** by Sreejith Kesavan
     - **Quick Tip: What Is a Metaclass in Python?** by Abder-Rahman Ali
     - **Understanding Python metaclasses** by Ionel Cristian Mărieș
+    - **How Exactly Do Context Managers Work?**by Evan Dempsey
