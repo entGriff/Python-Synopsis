@@ -17,6 +17,8 @@ Of course, it needs plenty of time to organize best resources based on the topic
     - [Start Coding With Python](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Start_Coding_With_Python)
     - [Data Types In Python 3](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Data_Types_In_Python_3)
     - [Variables and Assignment](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Variables_And_Assignment)
+    - [Conditions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Conditions)
+    - [For Loop](https://ent1c3d.github.io/Python-Synopsis/site/beginner/For_Loop)
     - ...
     - [Functions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Functions)
     - ...

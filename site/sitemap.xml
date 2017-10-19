@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,37 +13,49 @@
         
     <url>
      <loc>/beginner/Python_Programming_Lanuage/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/beginner/Python_Installation/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/beginner/Start_Coding_With_Python/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/beginner/Data_Types_In_Python_3/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/beginner/Variables_And_Assignment/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/beginner/Conditions/</loc>
+     <lastmod>2017-10-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/beginner/For_Loop/</loc>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/beginner/Functions/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -53,13 +65,13 @@
         
     <url>
      <loc>/advanced/Context_Managers/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/advanced/Python_Metaclasses/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -68,7 +80,7 @@
     
     <url>
      <loc>/About/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-10-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

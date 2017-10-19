@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Python Study Guide">
+      
+      
+      
+        <meta name="author" content="Goga Patarkatsishvili">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>For Loop - Python Synopsis</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Python Synopsis" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Beginner
+                </span>
+              
+            
+            For Loop
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Synopsis
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_Programming_Lanuage/" title="The Python Programming Language, Implementation and Adventages" class="md-nav__link">
+      The Python Programming Language, Implementation and Adventages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_Installation/" title="Python Installation" class="md-nav__link">
+      Python Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Start_Coding_With_Python/" title="Start Coding With Python" class="md-nav__link">
+      Start Coding With Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Types_In_Python_3/" title="Data Types in Python 3" class="md-nav__link">
+      Data Types in Python 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Variables_And_Assignment/" title="Variables and Assignment" class="md-nav__link">
+      Variables and Assignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Conditions/" title="Conditions" class="md-nav__link">
+      Conditions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        For Loop
+      </label>
+    
+    <a href="./" title="For Loop" class="md-nav__link md-nav__link--active">
+      For Loop
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-construct-for-loops-in-python-3" title="How To Construct For Loops in Python 3" class="md-nav__link">
+    How To Construct For Loops in Python 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loops" title="For Loops" class="md-nav__link">
+    For Loops
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-loops-using-range" title="For Loops using range()" class="md-nav__link">
+    For Loops using range()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-loops-using-sequential-data-types" title="For Loops using Sequential Data Types" class="md-nav__link">
+    For Loops using Sequential Data Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-for-loops" title="Nested For Loops" class="md-nav__link">
+    Nested For Loops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Functions/" title="Functions" class="md-nav__link">
+      Functions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/Context_Managers/" title="Context Managers" class="md-nav__link">
+      Context Managers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/Python_Metaclasses/" title="Python Metaclasses" class="md-nav__link">
+      Python Metaclasses
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-construct-for-loops-in-python-3" title="How To Construct For Loops in Python 3" class="md-nav__link">
+    How To Construct For Loops in Python 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loops" title="For Loops" class="md-nav__link">
+    For Loops
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-loops-using-range" title="For Loops using range()" class="md-nav__link">
+    For Loops using range()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-loops-using-sequential-data-types" title="For Loops using Sequential Data Types" class="md-nav__link">
+    For Loops using Sequential Data Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-for-loops" title="Nested For Loops" class="md-nav__link">
+    Nested For Loops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>For Loop</h1>
+                
+                <h2 id="how-to-construct-for-loops-in-python-3">How To Construct For Loops in Python 3</h2>
+<p>Using loops in computer programming allows us to automate and repeat similar tasks multiple times. In this tutorial, we’ll be covering Python’s for loop.</p>
+<p>A for loop implements the repeated execution of code based on a loop counter or loop variable. This means that for loops are used most often when the number of iterations is known before entering the loop, unlike while loops which are conditionally based.</p>
+<h2 id="for-loops">For Loops</h2>
+<p>In Python, for loops are constructed like so:  </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">[</span><span class="n">iterating</span> <span class="n">variable</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="n">sequence</span><span class="p">]:</span>
+    <span class="p">[</span><span class="n">do</span> <span class="n">something</span><span class="p">]</span>
+</pre></div>
+
+
+<p>The something that is being done will be executed until the sequence is over.  </p>
+<p>Let’s look at a for loop that iterates through a range of values:  </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+
+<p>When we run this program, the output looks like this:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</pre></div>
+
+
+<p>This for loop sets up i as its iterating variable, and the sequence exists in the range of 0 to 5.  </p>
+<p>Then within the loop we print out one integer per loop iteration. Keep in mind that in programming we tend to begin at index 0, so that is why although 5 numbers are printed out, they range from 0-4.  </p>
+<p>You’ll commonly see and use for loops when a program needs to repeat a block of code a number of times.  </p>
+<h3 id="for-loops-using-range">For Loops using range()</h3>
+<p>One of Python’s built-in immutable sequence types is range(). In loops, range() is used to control how many times the loop will be repeated.<br />
+When working with range(), you can pass between 1 and 3 integer arguments to it:  </p>
+<ul>
+<li>start states the integer value at which the sequence begins, if this is not included then start begins at 0</li>
+<li>stop is always required and is the integer that is counted up to but not included</li>
+<li>step sets how much to increase (or decrease in the case of negative numbers) the next iteration, if this is omitted then step defaults to 1</li>
+</ul>
+<p>We’ll look at some examples of passing different arguments to <code>range()</code>.</p>
+<p>First, let’s only pass the stop argument, so that our sequence set up is <code>range(stop)</code>:</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In the program above, the stop argument is 6, so the code will iterate from 0-6 (exclusive of 6):</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+</pre></div>
+
+
+<p>Next, we’ll look at range(start, stop), with values passed for when the iteration should start and for when it should stop:  </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">):</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Here, the range goes from 20 (inclusive) to 25 (exclusive), so the output looks like this:  </p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="mi">20</span>
+<span class="mi">21</span>
+<span class="mi">22</span>
+<span class="mi">23</span>
+<span class="mi">24</span>
+</pre></div>
+
+
+<p>The step argument of range() is similar to specifying stride while slicing strings in that it can be used to skip values within the sequence.</p>
+<p>With all three arguments, step comes in the final position: range(start, stop, step). First, let’s use a step with a positive value:  </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In this case, the for loop is set up so that the numbers from 0 to 15 print out, but at a step of 3, so that only every third number is printed, like so:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="mi">0</span>
+<span class="mi">3</span>
+<span class="mi">6</span>
+<span class="mi">9</span>
+<span class="mi">12</span>
+</pre></div>
+
+
+<p>We can also use a negative value for our step argument to iterate backwards, but we’ll have to adjust our start and stop arguments accordingly:  </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">):</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Here, 100 is the start value, 0 is the stop value, and -10 is the range, so the loop begins at 100 and ends at 0, decreasing by 10 with each iteration. We can see this occur in the output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="mi">100</span>
+<span class="mi">90</span>
+<span class="mi">80</span>
+<span class="mi">70</span>
+<span class="mi">60</span>
+<span class="mi">50</span>
+<span class="mi">40</span>
+<span class="mi">30</span>
+<span class="mi">20</span>
+<span class="mi">10</span>
+</pre></div>
+
+
+<p>When programming in Python, <code>for</code> loops often make use of the range() sequence type as its parameters for iteration.</p>
+<h3 id="for-loops-using-sequential-data-types">For Loops using Sequential Data Types</h3>
+<p>Lists and other data sequence types can also be leveraged as iteration parameters in for loops. Rather than iterating through a range(), you can define a list and iterate through that list.</p>
+<p>We’ll assign a list to a variable, and then iterate through the list: </p>
+<div class="codehilite"><pre><span></span><span class="n">sharks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hammerhead&#39;</span><span class="p">,</span> <span class="s1">&#39;great white&#39;</span><span class="p">,</span> <span class="s1">&#39;dogfish&#39;</span><span class="p">,</span> <span class="s1">&#39;frilled&#39;</span><span class="p">,</span> <span class="s1">&#39;bullhead&#39;</span><span class="p">,</span> <span class="s1">&#39;requiem&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">shark</span> <span class="ow">in</span> <span class="n">sharks</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">shark</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In this case, we are printing out each item in the list. Though we used the variable shark, we could have called the variable any other valid variable name and we would get the same output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">hammerhead</span>
+<span class="n">great</span> <span class="n">white</span>
+<span class="n">dogfish</span>
+<span class="n">frilled</span>
+<span class="n">bullhead</span>
+<span class="n">requiem</span>
+</pre></div>
+
+
+<p>The output above shows that the for loop iterated through the list, and printed each item from the list per line.</p>
+<p>Lists and other sequence-based data types like strings and tuples are common to use with loops because they are iterable. You can combine these data types with range() to add items to a list, for example:</p>
+<div class="codehilite"><pre><span></span><span class="n">sharks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hammerhead&#39;</span><span class="p">,</span> <span class="s1">&#39;great white&#39;</span><span class="p">,</span> <span class="s1">&#39;dogfish&#39;</span><span class="p">,</span> <span class="s1">&#39;frilled&#39;</span><span class="p">,</span> <span class="s1">&#39;bullhead&#39;</span><span class="p">,</span> <span class="s1">&#39;requiem&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sharks</span><span class="p">)):</span>
+   <span class="n">sharks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;shark&#39;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sharks</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="p">[</span><span class="s1">&#39;hammerhead&#39;</span><span class="p">,</span> <span class="s1">&#39;great white&#39;</span><span class="p">,</span> <span class="s1">&#39;dogfish&#39;</span><span class="p">,</span> <span class="s1">&#39;frilled&#39;</span><span class="p">,</span> <span class="s1">&#39;bullhead&#39;</span><span class="p">,</span> <span class="s1">&#39;requiem&#39;</span><span class="p">,</span> <span class="s1">&#39;shark&#39;</span><span class="p">,</span> <span class="s1">&#39;shark&#39;</span><span class="p">,</span> <span class="s1">&#39;shark&#39;</span><span class="p">,</span> <span class="s1">&#39;shark&#39;</span><span class="p">,</span> <span class="s1">&#39;shark&#39;</span><span class="p">,</span> <span class="s1">&#39;shark&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Here, we have added a placeholder string of 'shark' for each item of the length of the sharks list.</p>
+<p>You can also use a for loop to construct a list from scratch:</p>
+<div class="codehilite"><pre><span></span><span class="n">integers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+   <span class="n">integers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">integers</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In this example, the list integers is initialized empty, but the for loop populates the list like so:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Similarly, we can iterate through strings:</p>
+<div class="codehilite"><pre><span></span><span class="n">sammy</span> <span class="o">=</span> <span class="s1">&#39;Sammy&#39;</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">sammy</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">S</span>
+<span class="n">a</span>
+<span class="n">m</span>
+<span class="n">m</span>
+<span class="n">y</span>
+</pre></div>
+
+
+<p>Iterating through tuples is done in the same format as iterating through lists or strings above.</p>
+<p>When iterating through a dictionary, it’s important to keep the key : value structure in mind to ensure that you are calling the correct element of the dictionary. Here is an example that calls both the key and the value:</p>
+<div class="codehilite"><pre><span></span><span class="n">sammy_shark</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Sammy&#39;</span><span class="p">,</span> <span class="s1">&#39;animal&#39;</span><span class="p">:</span> <span class="s1">&#39;shark&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;ocean&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">sammy_shark</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">sammy_shark</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">Sammy</span>
+<span class="n">animal</span><span class="p">:</span> <span class="n">shark</span>
+<span class="n">location</span><span class="p">:</span> <span class="n">ocean</span>
+<span class="n">color</span><span class="p">:</span> <span class="n">blue</span>
+</pre></div>
+
+
+<p>When using dictionaries with for loops, the iterating variable corresponds to the keys of the dictionary, and dictionary_variable[iterating_variable] corresponds to the values. In the case above, the iterating variable key was used to stand for key, and sammy_shark[key] was used to stand for the values.</p>
+<p>Loops are often used to iterate and manipulate sequential data types.  </p>
+<h3 id="nested-for-loops">Nested For Loops</h3>
+<p>Loops can be nested in Python, as they can with other programming languages.</p>
+<p>A nested loop is a loop that occurs within another loop, structurally similar to nested if statements. These are constructed like so: </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">[</span><span class="n">first</span> <span class="n">iterating</span> <span class="n">variable</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="n">outer</span> <span class="n">loop</span><span class="p">]:</span> <span class="c1"># Outer loop</span>
+    <span class="p">[</span><span class="n">do</span> <span class="n">something</span><span class="p">]</span>  <span class="c1"># Optional</span>
+    <span class="k">for</span> <span class="p">[</span><span class="n">second</span> <span class="n">iterating</span> <span class="n">variable</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="n">nested</span> <span class="n">loop</span><span class="p">]:</span>   <span class="c1"># Nested loop</span>
+        <span class="p">[</span><span class="n">do</span> <span class="n">something</span><span class="p">]</span>  
+</pre></div>
+
+
+<p>The program first encounters the outer loop, executing its first iteration. This first iteration triggers the inner, nested loop, which then runs to completion. Then the program returns back to the top of the outer loop, completing the second iteration and again triggering the nested loop. Again, the nested loop runs to completion, and the program returns back to the top of the outer loop until the sequence is complete or a break or other statement disrupts the process.</p>
+<p>Let’s implement a nested for loop so we can take a closer look. In this example, the outer loop will iterate through a list of integers called num_list, and the inner loop will iterate through a list of strings called alpha_list.</p>
+<div class="codehilite"><pre><span></span><span class="n">num_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">alpha_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">num_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">alpha_list</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+
+
+<p>When we run this program, we’ll receive the following output: </p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="mi">1</span>
+<span class="n">a</span>
+<span class="n">b</span>
+<span class="n">c</span>
+<span class="mi">2</span>
+<span class="n">a</span>
+<span class="n">b</span>
+<span class="n">c</span>
+<span class="mi">3</span>
+<span class="n">a</span>
+<span class="n">b</span>
+<span class="n">c</span>
+</pre></div>
+
+
+<p>The output illustrates that the program completes the first iteration of the outer loop by printing 1, which then triggers completion of the inner loop, printing a, b, c consecutively. Once the inner loop has completed, the program returns to the top of the outer loop, prints 2, then again prints the inner loop in its entirety (a, b, c), etc.</p>
+<p>Nested for loops can be useful for iterating through items within lists composed of lists. In a list composed of lists, if we employ just one for loop, the program will output each internal list as an item:</p>
+<div class="codehilite"><pre><span></span><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;hammerhead&#39;</span><span class="p">,</span> <span class="s1">&#39;great white&#39;</span><span class="p">,</span> <span class="s1">&#39;dogfish&#39;</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mf">9.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="nb">list</span> <span class="ow">in</span> <span class="n">list_of_lists</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="p">[</span><span class="s1">&#39;hammerhead&#39;</span><span class="p">,</span> <span class="s1">&#39;great white&#39;</span><span class="p">,</span> <span class="s1">&#39;dogfish&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">9.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">]</span>
+</pre></div>
+
+
+<p>In order to access each individual item of the internal lists, we’ll implement a nested for loop:</p>
+<div class="codehilite"><pre><span></span><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;hammerhead&#39;</span><span class="p">,</span> <span class="s1">&#39;great white&#39;</span><span class="p">,</span> <span class="s1">&#39;dogfish&#39;</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mf">9.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="nb">list</span> <span class="ow">in</span> <span class="n">list_of_lists</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">hammerhead</span>
+<span class="n">great</span> <span class="n">white</span>
+<span class="n">dogfish</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mf">9.9</span>
+<span class="mf">8.8</span>
+<span class="mf">7.7</span>
+</pre></div>
+
+
+<p>When we utilize a nested for loop we are able to iterate over the individual items contained in the lists.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This tutorial went over how for loops work in Python and how to construct them. For loops continue to loop through a block of code provided a certain number of times.</p>
+<p>From here, you can continue to learn about looping by reading tutorials on <a href="https://www.digitalocean.com/community/tutorials/how-to-construct-while-loops-in-python-3">while</a> loops and <a href="https://www.digitalocean.com/community/tutorials/how-to-use-break-continue-and-pass-statements-when-working-with-loops-in-python-3">break, continue, and pass statements.</a></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Conditions/" title="Conditions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Conditions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Functions/" title="Functions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Functions
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Goga Patarkatsishvili
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ent1c3d" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.linkedin.com/in/ent1c3d/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

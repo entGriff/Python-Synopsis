@@ -1,0 +1,1244 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Python Study Guide">
+      
+      
+      
+        <meta name="author" content="Goga Patarkatsishvili">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Conditions - Python Synopsis</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Python Synopsis" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Beginner
+                </span>
+              
+            
+            Conditions
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Python Synopsis
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://ent1c3d.github.io/Python-Synopsis/site/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ent1c3d/Python-Synopsis
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_Programming_Lanuage/" title="The Python Programming Language, Implementation and Adventages" class="md-nav__link">
+      The Python Programming Language, Implementation and Adventages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_Installation/" title="Python Installation" class="md-nav__link">
+      Python Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Start_Coding_With_Python/" title="Start Coding With Python" class="md-nav__link">
+      Start Coding With Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Types_In_Python_3/" title="Data Types in Python 3" class="md-nav__link">
+      Data Types in Python 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Variables_And_Assignment/" title="Variables and Assignment" class="md-nav__link">
+      Variables and Assignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Conditions
+      </label>
+    
+    <a href="./" title="Conditions" class="md-nav__link md-nav__link--active">
+      Conditions
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-execution" title="Conditional Execution" class="md-nav__link">
+    Conditional Execution
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-execution" title="Alternative Execution" class="md-nav__link">
+    Alternative Execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chained-conditionals" title="Chained Conditionals" class="md-nav__link">
+    Chained Conditionals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-conditionals" title="Nested Conditionals" class="md-nav__link">
+    Nested Conditionals
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else-statements-in-python-by-udemy" title="If-Else statements in Python By Udemy" class="md-nav__link">
+    If-Else statements in Python By Udemy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-multiple-conditions-with-elif" title="Testing Multiple Conditions with Elif" class="md-nav__link">
+    Testing Multiple Conditions with Elif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-if-else-statements" title="Nested If-Else Statements" class="md-nav__link">
+    Nested If-Else Statements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-write-conditional-statements-in-python-3" title="How To Write Conditional Statements in Python 3" class="md-nav__link">
+    How To Write Conditional Statements in Python 3
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-statement" title="If statement" class="md-nav__link">
+    If statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else-statement" title="Else Statement" class="md-nav__link">
+    Else Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else-if-statement" title="Else if statement" class="md-nav__link">
+    Else if statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-if-statements" title="Nested If Statements" class="md-nav__link">
+    Nested If Statements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../For_Loop/" title="For Loop" class="md-nav__link">
+      For Loop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Functions/" title="Functions" class="md-nav__link">
+      Functions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/Context_Managers/" title="Context Managers" class="md-nav__link">
+      Context Managers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/Python_Metaclasses/" title="Python Metaclasses" class="md-nav__link">
+      Python Metaclasses
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-execution" title="Conditional Execution" class="md-nav__link">
+    Conditional Execution
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-execution" title="Alternative Execution" class="md-nav__link">
+    Alternative Execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chained-conditionals" title="Chained Conditionals" class="md-nav__link">
+    Chained Conditionals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-conditionals" title="Nested Conditionals" class="md-nav__link">
+    Nested Conditionals
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else-statements-in-python-by-udemy" title="If-Else statements in Python By Udemy" class="md-nav__link">
+    If-Else statements in Python By Udemy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-multiple-conditions-with-elif" title="Testing Multiple Conditions with Elif" class="md-nav__link">
+    Testing Multiple Conditions with Elif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-if-else-statements" title="Nested If-Else Statements" class="md-nav__link">
+    Nested If-Else Statements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-write-conditional-statements-in-python-3" title="How To Write Conditional Statements in Python 3" class="md-nav__link">
+    How To Write Conditional Statements in Python 3
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-statement" title="If statement" class="md-nav__link">
+    If statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else-statement" title="Else Statement" class="md-nav__link">
+    Else Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else-if-statement" title="Else if statement" class="md-nav__link">
+    Else if statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-if-statements" title="Nested If Statements" class="md-nav__link">
+    Nested If Statements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Conditions</h1>
+                
+                <h2 id="conditional-execution">Conditional Execution</h2>
+<p>In order to write useful programs, we almost always need the ability to check conditions
+and change the behavior of the program accordingly. Conditional statements give us this
+ability. The simplest form is the if statement:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x is positive&#39;</span>
+</pre></div>
+
+
+<p>The boolean expression after if is called the condition. If it is true, then the indented
+statement gets executed. If not, nothing happens.
+if statements have the same structure as function definitions: a header followed by an
+indented body. Statements like this are called compound statements.
+There is no limit on the number of statements that can appear in the body, but there has
+to be at least one. Occasionally, it is useful to have a body with no statements (usually
+as a place keeper for code you haven’t written yet). In that case, you can use the pass
+statement, which does nothing.</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">pass</span> <span class="c1"># need to handle negative values!</span>
+</pre></div>
+
+
+<h3 id="alternative-execution">Alternative Execution</h3>
+<p>A second form of the if statement is alternative execution, in which there are two
+possibilities and the condition determines which one gets executed. The syntax looks
+like this:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x is even&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x is odd&#39;</span>
+</pre></div>
+
+
+<p>If the remainder when x is divided by 2 is 0, then we know that x is even, and the program
+displays a message to that effect. If the condition is false, the second set of statements is
+executed. Since the condition must be true or false, exactly one of the alternatives will
+be executed. The alternatives are called branches, because they are branches in the flow
+of execution.</p>
+<h3 id="chained-conditionals">Chained Conditionals</h3>
+<p>Sometimes there are more than two possibilities and we need more than two branches.
+One way to express a computation like that is a chained conditional:  </p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x is less than y&#39;</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x is greater than y&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x and y are equal&#39;</span>
+</pre></div>
+
+
+<p>elif is an abbreviation of “else if.” Again, exactly one branch will be executed. There is
+no limit on the number of elif statements. If there is an else clause, it has to be at the
+end, but there doesn’t have to be one.  </p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+    <span class="n">draw_a</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+    <span class="n">draw_b</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+    <span class="n">draw_c</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Each condition is checked in order. If the first is false, the next is checked, and so on. If
+one of them is true, the corresponding branch executes, and the statement ends. Even
+if more than one condition is true, only the first true branch executes.</p>
+<h3 id="nested-conditionals">Nested Conditionals</h3>
+<p>One conditional can also be nested within another. We could have written the tri
+chotomy example like this:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x and y are equal&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;x is less than y&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;x is greater than y&#39;</span>
+</pre></div>
+
+
+<p>The outer conditional contains two branches. The first branch contains a simple state
+ment. The second branch contains another if statement, which has two branches of its
+own. Those two branches are both simple statements, although they could have been
+conditional statements as well.<br />
+Although the indentation of the statements makes the structure apparent, nested
+conditionals become difficult to read very quickly. In general, it is a good idea to avoid
+them when you can.<br />
+Logical operators often provide a way to simplify nested conditional statements. For
+example, we can rewrite the following code using a single conditional:  </p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;x is a positive single-digit number.&#39;</span>
+</pre></div>
+
+
+<p>The print statement is executed only if we make it past both conditionals, so we can
+get the same effect with the and operator:  </p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x is a positive single-digit number.&#39;</span>
+</pre></div>
+
+
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-book"></i>  <strong>Think Python</strong> by Allen B. Downey  - 2012</p>
+</blockquote>
+<h2 id="if-else-statements-in-python-by-udemy">If-Else statements in Python By Udemy</h2>
+<p>The if-else statement is a staple of most programming languages. It is used to test different conditions and execute code accordingly. You can think of it as a ‘map’ used to make decisions in the program.</p>
+<p>The basic syntax is as follows:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="o">=</span> <span class="bp">True</span><span class="p">:</span>
+      <span class="n">execute</span> <span class="n">code1</span>
+<span class="k">else</span><span class="p">:</span>               
+      <span class="n">execute</span> <span class="n">code2</span>
+</pre></div>
+
+
+<p>In plain English, this can be described as follows:
+<code>If condition1 is true, then execute the code included in code1. If it is not true, then run code2</code></p>
+<p>A few things to note about the syntax:
+- Each if/else statement must close with a colon (:)
+- Code to be executed as part of any if/else statement must be indented by four spaces, equivalent to one press of the Tab key.
+- Although not explicitly required, every if statement must also include an else statement – it just makes for a better program.</p>
+<p>You use if-else statements a lot in your every day. Virtually every decision you make involves some form of if-else statements. “If the bacon is cheap, I’ll buy a pound. If not, I’ll grab some mac and cheese”, “if I wake up before 6, I’ll head out for a jog. Otherwise, I’ll head straight to work”, and “if the traffic is light, we’ll make the movie theater in time. Else, we’ll just have to grab dinner and go back home” – these are some simple if-else decisions we’ve all made in our everyday life. Thus, by using if-else statements in Python, you give the program the ability to make decisions depending on the user input.</p>
+<p>But enough talk; let’s try to understand if-else statements with an example:</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+          <span class="k">print</span> <span class="s2">&quot;X is larger than five!&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+          <span class="k">print</span> <span class="s2">&quot;X is smaller than or equal to five!&quot;</span>
+</pre></div>
+
+
+<p>this program basically instructs Python to:
+- Check the value of x.
+- If the value of x is more than 5, print that “X is larger than five”.
+- If the value of x is less than or equal to 5, print “X is smaller than or equal to five”.</p>
+<p>As we’ll learn below, the decision making capabilities of if-else conditions will come very handy when you want to create complicated programs.</p>
+<h3 id="testing-multiple-conditions-with-elif">Testing Multiple Conditions with Elif</h3>
+<p>The above if-else syntax is great if you want to test just one condition, but what happens when you want to check multiple conditions?</p>
+<p>This is where the Elif statement comes in handy.<br />
+Elif is a shortened form of Else-If. The syntax can be seen as follows:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="o">=</span> <span class="bp">True</span><span class="p">:</span>
+         <span class="n">execute</span> <span class="n">code1</span>
+<span class="k">elif</span> <span class="n">condition2</span> <span class="o">=</span> <span class="bp">True</span><span class="p">:</span>
+         <span class="n">execute</span> <span class="n">code2</span>
+<span class="k">else</span><span class="p">:</span>  
+         <span class="n">execute</span> <span class="n">code3</span>
+</pre></div>
+
+
+<p>In plain English, you can read this as follows:
+<code>If condition1 is true, execute code1. Else, if condition2 is true, execute code2. If neither condition1 or condition2 are true, execute code3.</code></p>
+<p>There is no limit to the number of elif statements you can include in a Python program. You can test dozens of conditions using multiple elif statements as long as you close with an else statement.<br />
+Let’s try to understand this with an example:  </p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+          <span class="k">print</span> <span class="s2">&quot;Wow, X is EXACTLY five!&quot;</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+          <span class="k">print</span> <span class="s2">&quot;X is now MORE than five!&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+          <span class="k">print</span> <span class="s2">&quot;X is now LESS than five!&quot;</span>
+</pre></div>
+
+
+<p>So what exactly is happening here? Let’s break it down into individual steps:  </p>
+<ul>
+<li>Python first checks if the value of x is exactly equal to 5, as given in the first if statement.</li>
+<li>If x is equal to five, Python executes the code included within the first if statement and exits the program.</li>
+<li>If, however, x is not equal to 5, Python goes to the second elif statement. It now checks if x is greater than 5.</li>
+<li>In case x is more than 5, Python executes the second block of code under the elif statement and exits the program.</li>
+<li>However, if both conditions are not met, that is, x is neither equal to, nor greater than five, Python displays the output under the third else statement.</li>
+</ul>
+<p>As mentioned above, an if-else conditional block can include as many elif statements as you want.</p>
+<h3 id="nested-if-else-statements">Nested If-Else Statements</h3>
+<p>So far, we’ve used just a single level of if-else statements. But what if you want to make decisions within decisions? That’s like saying: “if the oranges are fresh, buy a dozen if they are more than $5/lb, and two dozen if they are less than $5/lb”</p>
+<p>In programmer-speak (i.e. algorithmically) this can be written as follows: </p>
+<div class="codehilite"><pre><span></span><span class="n">orange_quality</span> <span class="o">=</span> <span class="err">“</span><span class="n">fresh</span><span class="err">”</span>
+<span class="n">orange_price</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="k">if</span> <span class="n">orange_quality</span> <span class="o">==</span> <span class="err">“</span><span class="n">fresh</span><span class="err">”</span><span class="p">:</span>
+          <span class="k">if</span> <span class="n">orange_price</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+                    <span class="n">buy</span> <span class="mf">24.0</span>
+          <span class="k">else</span><span class="p">:</span> 
+                    <span class="n">buy</span> <span class="mf">12.0</span>
+<span class="k">else</span><span class="p">:</span>
+          <span class="n">don</span><span class="err">’</span><span class="n">t_buy_oranges</span>
+</pre></div>
+
+
+<p>This is an example of a nested if-else statement – an if-else statement inside another if-else statement. These can help you make more complex decisions and give you even finer control over the program flow. In terms of syntax, they can be written as follows:  </p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="o">=</span>  <span class="bp">True</span><span class="p">:</span>
+          <span class="k">if</span> <span class="n">condition2</span> <span class="o">=</span> <span class="bp">True</span><span class="p">:</span>
+                  <span class="n">execute</span> <span class="n">code1</span>
+          <span class="k">elif</span> <span class="n">condition3</span> <span class="o">=</span> <span class="bp">True</span><span class="p">:</span>
+                  <span class="n">execute</span> <span class="n">code2</span>
+          <span class="k">else</span><span class="p">:</span>
+                  <span class="n">execute</span> <span class="n">code3</span>
+<span class="k">else</span><span class="p">:</span>
+          <span class="n">execute</span> <span class="n">code4</span>
+</pre></div>
+
+
+<p>Thus, the syntax rules are the same as a standard if-statement – i.e. nested statements must be tabbed in. Theoretically, you can nest as many if-else statements as you want, but it is poor practice to go more than two levels deep. </p>
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> https://blog.udemy.com/python-if-else/</p>
+</blockquote>
+<h2 id="how-to-write-conditional-statements-in-python-3">How To Write Conditional Statements in Python 3</h2>
+<p>Conditional statements are part of every programming language. With conditional statements, we can have code that sometimes runs and at other times does not run, depending on the conditions of the program at that time.</p>
+<p>When we fully execute each statement of a program, moving from the top to the bottom with each line executed in order, we are not asking the program to evaluate specific conditions. By using conditional statements, programs can determine whether certain conditions are being met and then be told what to do next.  </p>
+<p>Let’s look at some examples where we would use conditional statements:  </p>
+<ul>
+<li>If the student receives over 65% on her test, report that her grade passes; if not, report that her grade fails</li>
+<li>If he has money in his account, calculate interest; if he doesn’t, charge a penalty fee</li>
+<li>If they buy 10 oranges or more, calculate a discount of 5%; if they buy fewer, then don’t</li>
+</ul>
+<p>Through evaluating conditions and assigning code to run based on whether or not those conditions are met, we are writing conditional code.  </p>
+<p>This tutorial will take you through writing conditional statements in the Python programming language.  </p>
+<h3 id="if-statement">If statement</h3>
+<p>We will start with the if statement, which will evaluate whether a statement is true or false, and run code only in the case that the statement is true.</p>
+<p>In a plain text editor, open a file and write the following code:  </p>
+<div class="codehilite"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">70</span>
+
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Passing grade&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>With this code, we have the variable grade and are giving it the integer value of 70. We are then using the if statement to evaluate whether or not the variable grade is greater than or equal ( &gt;= ) to 65. If it does meet this condition, we are telling the program to print out the string Passing grade.</p>
+<p>In this case, the grade of 70 does meet the condition of being greater than or equal to 65, so you will receive the following output once you run the program:  </p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">Passing</span> <span class="n">grade</span>
+</pre></div>
+
+
+<p>Let’s now change the result of this program by changing the value of the grade variable to 60:</p>
+<div class="codehilite"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">60</span>
+
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Passing grade&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>When we save and run this code, we will receive no output because the condition was not met and we did not tell the program to execute another statement.</p>
+<p>To give one more example, let us calculate whether a bank account balance is below 0. Let’s create a file called <code>account.py</code> and write the following program:</p>
+<div class="codehilite"><pre><span></span><span class="n">balance</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+
+<span class="k">if</span> <span class="n">balance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Balance is below 0, add funds now or you will be charged a penalty.&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>When we run the program with python account.py, we’ll receive the following output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">Balance</span> <span class="ow">is</span> <span class="n">below</span> <span class="mi">0</span><span class="p">,</span> <span class="n">add</span> <span class="n">funds</span> <span class="n">now</span> <span class="ow">or</span> <span class="n">you</span> <span class="n">will</span> <span class="n">be</span> <span class="n">charged</span> <span class="n">a</span> <span class="n">penalty</span><span class="o">.</span>
+</pre></div>
+
+
+<p>In the program we initialized the variable <code>balance</code> with the value of -5, which is less than 0. Since the balance met the condition of the if statement (balance &lt; 0), once we save and run the code, we will receive the string output. Again, if we change the balance to 0 or a positive number, we will receive no output.</p>
+<h3 id="else-statement">Else Statement</h3>
+<p>It is likely that we will want the program to do something even when an <code>if</code> statement evaluates to false. In our grade example, we will want output whether the grade is passing or failing.</p>
+<p>To do this, we will add an else statement to the grade condition above that is constructed like this:</p>
+<div class="codehilite"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">60</span>
+
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Passing grade&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Failing grade&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Since the grade variable above has the value of 60, the if statement evaluates as false, so the program will not print out Passing grade. The else statement that follows tells the program to do something anyway.</p>
+<p>When we save and run the program, we’ll receive the following output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">Failing</span> <span class="n">grade</span>
+</pre></div>
+
+
+<p>If we then rewrite the program to give the grade a value of <code>65</code> or higher, we will instead receive the output <code>Passing grade</code>.</p>
+<p>To add an else statement to the bank account example, we rewrite the code like this:</p>
+<div class="codehilite"><pre><span></span><span class="n">balance</span> <span class="o">=</span> <span class="mi">522</span>
+
+<span class="k">if</span> <span class="n">balance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Balance is below 0, add funds now or you will be charged a penalty.&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Your balance is 0 or above.&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Here, we changed the balance variable value to a positive number so that the else statement will print. To get the first if statement to print, we can rewrite the value to a negative number.</p>
+<p>By combining an if statement with an else statement, you are constructing a two-part conditional statement that will tell the computer to execute certain code whether or not the if condition is met.  </p>
+<h3 id="else-if-statement">Else if statement</h3>
+<p>So far, we have presented a Boolean option for conditional statements, with each if statement evaluating to either true or false. In many cases, we will want a program that evaluates more than two possible outcomes. For this, we will use an else if statement, which is written in Python as elif. The elif or else if statement looks like the if statement and will evaluate another condition.</p>
+<p>In the bank account program, we may want to have three discrete outputs for three different situations:</p>
+<ul>
+<li>The balance is below 0</li>
+<li>The balance is equal to 0</li>
+<li>The balance is above 0</li>
+</ul>
+<p>The <code>elif</code> statement will be placed between the if statement and the else statement as follows:</p>
+<div class="codehilite"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">if</span> <span class="n">balance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Balance is below 0, add funds now or you will be charged a penalty.&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">balance</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Balance is equal to 0, add funds soon.&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Your balance is 0 or above.&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Now, there are three possible outputs that can occur once we run the program:
+- If the variable balance is equal to 0 we will receive the output from the elif statement (Balance is equal to 0, add funds soon.)
+- If the variable balance is set to a positive number, we will receive the output from the else statement (Your balance is 0 or above.).
+- If the variable balance is set to a negative number, the output will be the string from the if statement (Balance is below 0, add funds now or you will be charged a penalty).</p>
+<p>What if we want to have more than three possibilities, though? We can do this by writing more than one elif statement into our code.</p>
+<p>In the <code>grade.py</code> program, let’s rewrite the code so that there are a few letter grades corresponding to ranges of numerical grades:</p>
+<ul>
+<li>90 or above is equivalent to an A grade</li>
+<li>80-89 is equivalent to a B grade</li>
+<li>70-79 is equivalent to a C grade</li>
+<li>65-69 is equivalent to a D grade</li>
+<li>64 or below is equivalent to an F grade</li>
+</ul>
+<p>To run this code, we will need one <code>if</code> statement, three <code>elif</code> statements, and an <code>else</code> statement that will handle all failing cases.</p>
+<p>Let’s rewrite the code from the example above to have strings that print out each of the letter grades. We can keep our else statement the same.</p>
+<div class="codehilite"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A grade&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span><span class="mi">80</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;B grade&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span><span class="mi">70</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;C grade&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;D grade&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Failing grade&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Since elif statements will evaluate in order, we can keep our statements pretty basic. This program is completing the following steps:</p>
+<ul>
+<li>If the grade is greater than 90, the program will print A grade, if the grade is less than 90, the program will continue to the next statement...</li>
+<li>If the grade is greater than or equal to 80, the program will print B grade, if the grade is 79 or less, the program will continue to the next statement...</li>
+<li>If the grade is greater than or equal to 70, the program will print C grade, if the grade is 69 or less, the program will continue to the next statement...</li>
+<li>If the grade is greater than or equal to 65, the program will print D grade, if the grade is 64 or less, the program will continue to the next statement...</li>
+<li>The program will print Failing grade because all of the above conditions were not met.</li>
+</ul>
+<h3 id="nested-if-statements">Nested If Statements</h3>
+<p>Once you are feeling comfortable with the if, elif, and else statements, you can move on to nested conditional statements. We can use nested if statements for situations where we want to check for a secondary condition if the first condition executes as true. For this, we can have an if-else statement inside of another if-else statement. Let’s look at the syntax of a nested if statement:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">statement1</span><span class="p">:</span>              <span class="c1">#outer if statement</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">nested_statement</span><span class="p">:</span>    <span class="c1">#nested if statement</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>                   <span class="c1">#nested else statement</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;no&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>                       <span class="c1">#outer else statement</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>A few possible outputs can result from this code:<br />
+- If <code>statement1</code> evaluates to true, the program will then evaluate whether the nested_statement also evaluates to true. If both cases are true, the output will be:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">true</span>
+<span class="n">yes</span>
+</pre></div>
+
+
+<ul>
+<li>If, however, statement1 evaluates to true, but nested_statement evaluates to false, then the output will be:</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">true</span>
+<span class="n">no</span>
+</pre></div>
+
+
+<ul>
+<li>And if statement1 evaluates to false, the nested if-else statement will not run, so the else statement will run alone, and the output will be:</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">false</span>
+</pre></div>
+
+
+<p>We can also have multiple if statements nested throughout our code:</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">statement1</span><span class="p">:</span>                  <span class="c1">#outer if </span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">nested_statement1</span><span class="p">:</span>       <span class="c1">#first nested if </span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">nested_statement2</span><span class="p">:</span>     <span class="c1">#first nested elif</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;maybe&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>                       <span class="c1">#first nested else</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;no&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">statement2</span><span class="p">:</span>                <span class="c1">#outer elif</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello galaxy&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">nested_statement3</span><span class="p">:</span>       <span class="c1">#second nested if</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">nested_statement4</span><span class="p">:</span>     <span class="c1">#second nested elif</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;maybe&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>                       <span class="c1">#second nested else</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;no&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>                           <span class="c1">#outer else</span>
+    <span class="n">statement</span><span class="p">(</span><span class="s2">&quot;hello universe&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In the above code, there is a nested if statement inside each if statement in addition to the elif statement. This will allow for more options within each condition.</p>
+<p>Let’s look at an example of nested if statements with our grade.py program. We can check for whether a grade is passing first (greater than or equal to 65%), then evaluate which letter grade the numerical grade should be equivalent to. If the grade is not passing, though, we do not need to run through the letter grades, and instead can have the program report that the grade is failing. Our modified code with the nested if statement will look like this:</p>
+<div class="codehilite"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Passing grade of:&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span><span class="mi">80</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span><span class="mi">70</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Failing grade&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>If we run the code with the variable grade set to the integer value 92, the first condition is met, and the program will print out Passing grade of:. Next, it will check to see if the grade is greater than or equal to 90, and since this condition is also met, it will print out A.</p>
+<p>If we run the code with the grade variable set to 60, then the first condition is not met, so the program will skip the nested if statements and move down to the else statement, with the program printing out <code>Failing grade</code>.</p>
+<p>We can of course add even more options to this, and use a second layer of nested if statements. Perhaps we will want to evaluate for grades of A+, A and A- separately. We can do so by first checking if the grade is passing, then checkingto see if the grade is 90 or above, then checkingto see if the grade is over 96 for an A+ for instance:</p>
+<div class="codehilite"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Passing grade of:&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;</span> <span class="mi">96</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A+&quot;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;</span> <span class="mi">93</span> <span class="ow">and</span> <span class="n">grade</span> <span class="o">&lt;=</span> <span class="mi">96</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A-&quot;</span><span class="p">)</span>
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+</pre></div>
+
+
+<p>In the code above, for a grade variable set to 96, the program will run the following:</p>
+<ul>
+<li>Check if the grade is greater than or equal to 65 (true)</li>
+<li>Print out Passing grade of:</li>
+<li>Check if the grade is greater than or equal to 90 (true)</li>
+<li>Check if the grade is greater than 96 (false)</li>
+<li>Check if the grade is greater than 93 and also less than or equal to 96 (true)</li>
+<li>Print A</li>
+<li>Leave these nested conditional statements and continue with remaining code</li>
+</ul>
+<p>The output of the program for a grade of 96 therefore looks like this:</p>
+<div class="codehilite"><pre><span></span><span class="n">Output</span>
+<span class="n">Passing</span> <span class="n">grade</span> <span class="n">of</span><span class="p">:</span>
+<span class="n">A</span>
+</pre></div>
+
+
+<p>Nested if statements can provide the opportunity to add several specific levels of conditions to your code.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>By using conditional statements like the if statement, you will have greater control over what your program executes. Conditional statements tell the program to evaluate whether a certain condition is being met. If the condition is met it will execute specific code, but if it is not met the program will continue to move down to other code.</p>
+<blockquote>
+<p><strong>Source:</strong> <br />
+<i class="fa fa-link"></i> https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-python-3-2</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Variables_And_Assignment/" title="Variables and Assignment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Variables and Assignment
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../For_Loop/" title="For Loop" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                For Loop
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Goga Patarkatsishvili
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/ent1c3d" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.linkedin.com/in/ent1c3d/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
