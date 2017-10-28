@@ -158,3 +158,7 @@ getattr(math,name) returns the object (function, or otherwise) from the math mod
 
 > **Source:**   
 > :fa-link: https://stackoverflow.com/questions/26818007/python-dir-how-can-i-differentiate-between-functions-method-and-simple-att
+
+## Why do we need wrapper function in decorators?
+### answers from stackoverflow :
+https://stackoverflow.com/questions/45335580/why-do-we-need-wrapper-function-in-decorators
