@@ -21,6 +21,9 @@ pages:
         - Conditions : beginner/Conditions.md
         - For Loop : beginner/For_Loop.md
         - Functions : beginner/Functions.md
+        - Scope : beginner/Scopes.md
+        - Scopes, Namespaces and LEGB Rule : beginner/Scopes_Namespaces_LEGB_rule.md
+
     - Advanced:
         - Context Managers   : advanced/Context_Managers.md 
         - Python Metaclasses   : advanced/Python_Metaclasses.md 

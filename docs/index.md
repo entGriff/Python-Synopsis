@@ -21,6 +21,8 @@ Of course, it needs plenty of time to organize best resources based on the topic
     - [For Loop](https://ent1c3d.github.io/Python-Synopsis/site/beginner/For_Loop)
     - ...
     - [Functions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Functions)
+    - [Scope](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Scopes)
+    - [Scopes, Namespaces and LEGB Rule](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Scopes_Namespaces_LEGB_rule)
     - ...
 - Intermediate
     - ... 
@@ -29,3 +31,4 @@ Of course, it needs plenty of time to organize best resources based on the topic
     - [Context Managers](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Context_Managers)
     - [Python Metaclasses](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Python_Metaclasses)
     - ...  
+

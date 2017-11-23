@@ -24,6 +24,8 @@ So, You can start study from here:
     - [Variables and Assignment](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Variables_And_Assignment)
     - [Conditions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Conditions)
     - [For Loop](https://ent1c3d.github.io/Python-Synopsis/site/beginner/For_Loop)
+    - [Scope](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Scopes)
+    - [Scopes, Namespaces and LEGB Rule](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Scopes_Namespaces_LEGB_rule)
     - ...
     - [Functions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Functions)
     - ...
