@@ -27,6 +27,7 @@ pages:
     - Advanced:
         - Context Managers   : advanced/Context_Managers.md 
         - Python Metaclasses   : advanced/Python_Metaclasses.md 
+        - Python Magic Methods   : advanced/Python_Magic_Methods.md 
     - About: About.md
 
 # Documentation and theme

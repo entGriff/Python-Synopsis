@@ -30,5 +30,6 @@ Of course, it needs plenty of time to organize best resources based on the topic
     - ...
     - [Context Managers](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Context_Managers)
     - [Python Metaclasses](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Python_Metaclasses)
+    - [Python Magic Methods](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Python_Magic_Methods)
     - ...  
 
