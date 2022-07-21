@@ -55,6 +55,7 @@ So, You can start study from here:
     - **http://pythoncentral.io**
     - **http://thepythonguru.com**
     - **https://code.tutsplus.com**
+    - **https://www.scaler.com/topics/python/**
 - Articles :
     - **Assignment statements in Python are more interesting than you might think** by Dibya Chakravorty
     - **Understanding Python variables and Memory Management** by Sreejith Kesavan
