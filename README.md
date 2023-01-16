@@ -14,27 +14,27 @@ So, after all I decided to share **top resources** for everyone about each topic
 Of course, it needs plenty of time to organize best resources based on the topics and it's hard for me to do it every day,  but I want to do min 1 chapter each week and now I think, that there will be more than **30-40** chapters.
 
 So, You can start study from here:  
-<i class="fa-file"></i>  [Python Synopsis - https://ent1c3d.github.io/Python-Synopsis/site/ ](https://ent1c3d.github.io/Python-Synopsis/site/)
+<i class="fa-file"></i>  [Python Synopsis - https://entgriff.github.io/Python-Synopsis/site/ ](https://entgriff.github.io/Python-Synopsis/site/)
 
 - Beginner
-    - [The Python Programming Language, Implementation and Adventages](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Python_Programming_Lanuage)
-    - [Python Installation](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Python_Installation)
-    - [Start Coding With Python](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Start_Coding_With_Python)
-    - [Data Types In Python 3](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Data_Types_In_Python_3)
-    - [Variables and Assignment](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Variables_And_Assignment)
-    - [Conditions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Conditions)
-    - [For Loop](https://ent1c3d.github.io/Python-Synopsis/site/beginner/For_Loop)
-    - [Scope](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Scopes)
-    - [Scopes, Namespaces and LEGB Rule](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Scopes_Namespaces_LEGB_rule)
+    - [The Python Programming Language, Implementation and Adventages](https://entgriff.github.io/Python-Synopsis/site/beginner/Python_Programming_Lanuage)
+    - [Python Installation](https://entgriff.github.io/Python-Synopsis/site/beginner/Python_Installation)
+    - [Start Coding With Python](https://entgriff.github.io/Python-Synopsis/site/beginner/Start_Coding_With_Python)
+    - [Data Types In Python 3](https://entgriff.github.io/Python-Synopsis/site/beginner/Data_Types_In_Python_3)
+    - [Variables and Assignment](https://entgriff.github.io/Python-Synopsis/site/beginner/Variables_And_Assignment)
+    - [Conditions](https://entgriff.github.io/Python-Synopsis/site/beginner/Conditions)
+    - [For Loop](https://entgriff.github.io/Python-Synopsis/site/beginner/For_Loop)
+    - [Scope](https://entgriff.github.io/Python-Synopsis/site/beginner/Scopes)
+    - [Scopes, Namespaces and LEGB Rule](https://entgriff.github.io/Python-Synopsis/site/beginner/Scopes_Namespaces_LEGB_rule)
     - ...
-    - [Functions](https://ent1c3d.github.io/Python-Synopsis/site/beginner/Functions)
+    - [Functions](https://entgriff.github.io/Python-Synopsis/site/beginner/Functions)
     - ...
 - Intermediate
     - ... 
 - Advanced
     - ...
-    - [Context Managers](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Context_Managers)
-    - [Python Metaclasses](https://ent1c3d.github.io/Python-Synopsis/site/advanced/Python_Metaclasses)
+    - [Context Managers](https://entgriff.github.io/Python-Synopsis/site/advanced/Context_Managers)
+    - [Python Metaclasses](https://entgriff.github.io/Python-Synopsis/site/advanced/Python_Metaclasses)
     - ...  
 
 
